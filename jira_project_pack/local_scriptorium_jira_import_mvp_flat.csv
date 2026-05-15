@@ -1,0 +1,354 @@
+Summary,Issue Type,Description,Priority,Labels,Component,Story Points,Original Estimate,Estimate Hours,Due Date,Target Sprint,Energy Level,Epic,MVP Stage
+Create project charter,Task,"Goal: Define the mission, MVP goal, non-goals, success criteria, constraints, and completion definition.
+
+Acceptance Criteria:
+- Project charter exists in docs/project_charter.md
+- MVP and non-goals are explicit
+- Success criteria are testable
+
+Output Artifact: docs/project_charter.md",High,setup,Phase 0 Setup,1,2700,0.75,2026-05-17,Sprint 0,Low,Project Setup,MVP
+Create Jira Scrum-lite project,Task,"Goal: Create the Jira project and import this MVP backlog.
+
+Acceptance Criteria:
+- Project named Local Scriptorium exists
+- Board has Backlog, Selected for Sprint, In Progress, Blocked, Review, Done
+- Story points and original estimate are visible
+
+Output Artifact: Jira board URL or screenshot",High,setup,Phase 0 Setup,1,2700,0.75,2026-05-17,Sprint 0,Low,Project Setup,MVP
+Create repo and folder structure,Task,"Goal: Create a simple project workspace with folders for sources, chunks, outputs, evals, docs, decisions, and scripts.
+
+Acceptance Criteria:
+- Folder structure exists
+- README stub exists
+- No extra framework added yet
+
+Output Artifact: Repo/folder screenshot or README",High,setup,Phase 0 Setup,1,1800,0.5,2026-05-17,Sprint 0,Low,Project Setup,MVP
+Create decision log template,Task,"Goal: Create a reusable decision log for technical and product decisions.
+
+Acceptance Criteria:
+- decision_log.md exists
+- Template includes date, context, options, decision, reason, consequences
+- First decision recorded
+
+Output Artifact: decisions/decision_log.md",Medium,setup,Phase 0 Setup,1,1800,0.5,2026-05-17,Sprint 0,Low,Project Setup,MVP
+Validate imported Jira backlog,Task,"Goal: Confirm the imported backlog is usable and estimates are visible.
+
+Acceptance Criteria:
+- CSV import completed
+- Ticket descriptions preserved
+- Estimates mapped or documented as custom fields
+
+Output Artifact: Screenshot or short setup note",Medium,setup,Phase 0 Setup,1,1800,0.5,2026-05-17,Sprint 0,Low,Project Setup,MVP
+Install Ollama,Task,"Goal: Install Ollama locally as the easiest baseline for local inference.
+
+Acceptance Criteria:
+- Ollama installed
+- Terminal command works
+- Install notes saved
+
+Output Artifact: docs/setup_notes.md",High,ollama,Phase 1 Local Inference,2,3600,1.0,2026-05-24,Sprint 1,Medium,Local Inference Baseline,MVP
+Run first local model,Task,"Goal: Run a small local LLM and produce the first local answer.
+
+Acceptance Criteria:
+- Model pulled
+- Prompt returns output
+- Model name and command saved
+
+Output Artifact: outputs/local_model_hello_world.md",High,local-inference,Phase 1 Local Inference,2,3600,1.0,2026-05-24,Sprint 1,Medium,Local Inference Baseline,MVP
+Create 10 baseline prompts,Task,"Goal: Create a small prompt set for comparing local and cloud answers.
+
+Acceptance Criteria:
+- 10 prompts written
+- Prompts cover summary, argument extraction, evidence, uncertainty, and refusal
+- Prompts saved in evals folder
+
+Output Artifact: evals/baseline_prompts.md",Medium,evals,Phase 1 Local Inference,2,3600,1.0,2026-05-24,Sprint 1,Medium,Local Inference Baseline,MVP
+Save 10 baseline local outputs,Task,"Goal: Run the baseline prompts through the local model and save outputs.
+
+Acceptance Criteria:
+- All 10 prompts run locally
+- Outputs saved with model name and date
+- Obvious failures noted
+
+Output Artifact: outputs/baseline_local_outputs.md",High,local-inference,Phase 1 Local Inference,2,5400,1.5,2026-05-24,Sprint 1,Medium,Local Inference Baseline,MVP
+Compare local output vs ChatGPT,Task,"Goal: Run the same prompts through ChatGPT and compare quality, latency, and structure.
+
+Acceptance Criteria:
+- Same prompt set used
+- Local vs cloud differences recorded
+- At least 3 failure examples captured
+
+Output Artifact: docs/local_vs_cloud_comparison.md",High,evals,Phase 1 Local Inference,3,7200,2.0,2026-05-24,Sprint 1,High,Local Inference Baseline,MVP
+Write local inference baseline memo,Task,"Goal: Summarize what local inference means in practice after first hands-on testing.
+
+Acceptance Criteria:
+- Memo explains what worked
+- Memo explains what failed
+- Memo identifies next smallest step
+
+Output Artifact: docs/day_1_local_inference_baseline.md",High,docs,Phase 1 Local Inference,2,3600,1.0,2026-05-24,Sprint 1,Medium,Local Inference Baseline,MVP
+Select first source corpus,Task,"Goal: Choose the first 3 to 5 clean text sources for the MVP corpus.
+
+Acceptance Criteria:
+- 3 to 5 sources selected
+- Sources are text or markdown
+- Copyright/privacy status noted
+
+Output Artifact: sources/source_selection.md",High,ingestion,Phase 2 Source Corpus,1,2700,0.75,2026-05-31,Sprint 2,Low,Source Corpus and Chunking,MVP
+Create source metadata file,Task,"Goal: Create metadata for each source so chunks can be traced back later.
+
+Acceptance Criteria:
+- Metadata includes source_id, title, author, type, notes
+- Every source has a stable ID
+- File saved in sources folder
+
+Output Artifact: sources/sources_metadata.csv",High,ingestion,Phase 2 Source Corpus,2,3600,1.0,2026-05-31,Sprint 2,Low,Source Corpus and Chunking,MVP
+Clean first 3 source files,Task,"Goal: Prepare source files by removing obvious formatting junk and making text usable.
+
+Acceptance Criteria:
+- 3 files cleaned
+- Headings preserved where useful
+- Cleaned files saved separately
+
+Output Artifact: sources/clean/",High,ingestion,Phase 2 Source Corpus,3,7200,2.0,2026-05-31,Sprint 2,Medium,Source Corpus and Chunking,MVP
+Define chunk ID convention,Task,"Goal: Create a stable ID convention for chunks.
+
+Acceptance Criteria:
+- Convention documented
+- Example chunk IDs included
+- IDs encode source and sequence
+
+Output Artifact: docs/chunking_rules.md",High,chunking,Phase 2 Source Corpus,1,1800,0.5,2026-05-31,Sprint 2,Low,Source Corpus and Chunking,MVP
+Create initial manual chunks,Task,"Goal: Manually chunk one source to understand the desired structure before scripting.
+
+Acceptance Criteria:
+- At least 20 chunks created
+- Each chunk has source ID
+- Chunks are readable and not overly tiny
+
+Output Artifact: chunks/manual_chunks.md",High,chunking,Phase 2 Source Corpus,2,5400,1.5,2026-05-31,Sprint 2,Medium,Source Corpus and Chunking,MVP
+Create chunking script with AI coding tool,Task,"Goal: Use an AI coding assistant to create a simple script that chunks txt and markdown files.
+
+Acceptance Criteria:
+- Script reads sources folder
+- Script writes chunks.json
+- Script preserves source filename and source ID
+- Script prints chunk count
+
+Output Artifact: scripts/chunk_sources.py and chunks/chunks.json",High,chunking,Phase 2 Source Corpus,5,14400,4.0,2026-06-07,Sprint 3,High,Source Corpus and Chunking,MVP
+Validate chunk output,Task,"Goal: Check that automated chunks are coherent and traceable.
+
+Acceptance Criteria:
+- 10 random chunks inspected
+- Bad chunk examples logged
+- Chunking rules updated if needed
+
+Output Artifact: docs/chunk_validation_notes.md",High,chunking,Phase 2 Source Corpus,2,3600,1.0,2026-06-07,Sprint 3,Medium,Source Corpus and Chunking,MVP
+Create 10 manual RAG questions,Task,"Goal: Create questions that require source-grounded answers.
+
+Acceptance Criteria:
+- 10 questions written
+- Questions include factual, interpretive, and comparison types
+- Expected source hints added where possible
+
+Output Artifact: evals/manual_rag_questions.md",High,rag,Phase 3 Manual RAG,2,3600,1.0,2026-06-07,Sprint 3,Medium,Manual RAG,MVP
+Manually select relevant chunks,Task,"Goal: Pick source chunks by hand for each manual RAG question.
+
+Acceptance Criteria:
+- Each question has selected chunk IDs
+- Selection rationale noted
+- At least one insufficient-evidence case included
+
+Output Artifact: evals/manual_rag_contexts.md",High,rag,Phase 3 Manual RAG,2,3600,1.0,2026-06-07,Sprint 3,Medium,Manual RAG,MVP
+Run prompts with and without chunks,Task,"Goal: Compare local answers with and without supplied context.
+
+Acceptance Criteria:
+- All 10 questions run both ways
+- Outputs saved
+- Differences highlighted
+
+Output Artifact: outputs/manual_rag_comparison.md",High,rag,Phase 3 Manual RAG,3,7200,2.0,2026-06-14,Sprint 4,High,Manual RAG,MVP
+Document grounding improvements and failures,Task,"Goal: Write what manual RAG improved and where it still failed.
+
+Acceptance Criteria:
+- At least 3 improvements documented
+- At least 3 failures documented
+- Decision made on retrieval approach for MVP
+
+Output Artifact: docs/manual_rag_findings.md",High,docs,Phase 3 Manual RAG,3,7200,2.0,2026-06-14,Sprint 4,High,Manual RAG,MVP
+Build keyword search over chunks,Task,"Goal: Create a simple retrieval baseline using keyword or lexical search.
+
+Acceptance Criteria:
+- Script accepts a question
+- Script searches chunks.json
+- Script returns candidate chunks
+
+Output Artifact: scripts/search_chunks.py",High,retrieval,Phase 4 Basic Retrieval,3,7200,2.0,2026-06-14,Sprint 4,High,Basic Retrieval,MVP
+Return top 5 chunks for a question,Story,"Goal: As a user, I can ask a question and see the top 5 retrieved source chunks.
+
+Acceptance Criteria:
+- Question input supported
+- Top 5 chunks displayed with source IDs
+- Output is readable
+
+Output Artifact: outputs/sample_retrieval_output.md",High,retrieval,Phase 4 Basic Retrieval,3,7200,2.0,2026-06-21,Sprint 5,High,Basic Retrieval,MVP
+Log retrieved chunks to output file,Task,"Goal: Save retrieval results so they can be evaluated later.
+
+Acceptance Criteria:
+- Results saved to outputs folder
+- Includes question, timestamp, chunk IDs, scores if available
+- File format is reusable
+
+Output Artifact: outputs/retrieval_log.json or md",Medium,retrieval,Phase 4 Basic Retrieval,2,3600,1.0,2026-06-21,Sprint 5,Medium,Basic Retrieval,MVP
+Test retrieval on 15 questions,Task,"Goal: Run retrieval on a broader set of questions and inspect quality.
+
+Acceptance Criteria:
+- 15 questions tested
+- Correct/incorrect retrieval noted
+- Failure examples saved
+
+Output Artifact: evals/retrieval_test_results.md",High,evals,Phase 4 Basic Retrieval,3,7200,2.0,2026-06-21,Sprint 5,High,Basic Retrieval,MVP
+Create grounded answer prompt template,Task,"Goal: Create the strict prompt template that forces sourced, cautious answers.
+
+Acceptance Criteria:
+- Template says use only provided sources
+- Template requires source IDs
+- Template includes uncertainty and insufficient evidence section
+
+Output Artifact: docs/grounded_answer_prompt.md",High,rag,Phase 5 Grounded Answers,2,3600,1.0,2026-06-21,Sprint 5,Medium,Grounded Answer Generator,MVP
+Connect retrieval output to model input,Story,"Goal: As a user, retrieved chunks are passed into the local model as answer context.
+
+Acceptance Criteria:
+- Retrieval output becomes model context
+- Prompt template applied
+- Command documented
+
+Output Artifact: scripts/answer_with_context.py",High,rag,Phase 5 Grounded Answers,5,14400,4.0,2026-06-28,Sprint 6,High,Grounded Answer Generator,MVP
+Generate grounded answer with source IDs,Story,"Goal: As a user, I receive an answer that cites the source chunks it used.
+
+Acceptance Criteria:
+- Answer includes source IDs
+- Answer is based on retrieved chunks
+- Output saved
+
+Output Artifact: outputs/sample_grounded_answer.md",High,rag,Phase 5 Grounded Answers,3,7200,2.0,2026-06-28,Sprint 6,High,Grounded Answer Generator,MVP
+Add uncertainty and insufficient evidence section,Task,"Goal: Make the model explicitly state uncertainty and source limitations.
+
+Acceptance Criteria:
+- Output includes uncertainty section
+- Output includes what sources do not establish
+- At least one refusal/insufficient evidence example tested
+
+Output Artifact: outputs/insufficient_evidence_example.md",High,rag,Phase 5 Grounded Answers,2,3600,1.0,2026-06-28,Sprint 6,Medium,Grounded Answer Generator,MVP
+Save generated answers to outputs folder,Task,"Goal: Ensure generated answers are saved consistently for review and case study evidence.
+
+Acceptance Criteria:
+- File naming convention exists
+- Question, sources, model, and answer are saved
+- At least 5 sample answers saved
+
+Output Artifact: outputs/grounded_answers/",Medium,rag,Phase 5 Grounded Answers,2,3600,1.0,2026-06-28,Sprint 6,Medium,Grounded Answer Generator,MVP
+Create 20 question MVP eval set,Task,"Goal: Create a compact evaluation set for MVP quality testing.
+
+Acceptance Criteria:
+- 20 questions created
+- Expected answer traits included
+- Questions cover factual, interpretive, comparison, and insufficient evidence cases
+
+Output Artifact: evals/mvp_eval_set.csv",High,evals,Phase 6 Evaluation,5,14400,4.0,2026-07-05,Sprint 7,High,Mini Evaluation,MVP
+Define scoring rubric,Task,"Goal: Define how outputs will be judged.
+
+Acceptance Criteria:
+- Rubric includes retrieval correctness
+- Rubric includes hallucination/unsupported claim check
+- Rubric includes usefulness score
+
+Output Artifact: evals/scoring_rubric.md",High,evals,Phase 6 Evaluation,3,7200,2.0,2026-07-05,Sprint 7,Medium,Mini Evaluation,MVP
+Run mini eval local only vs local RAG,Task,"Goal: Compare local model answers with and without retrieval.
+
+Acceptance Criteria:
+- Same questions run in both modes
+- Scores recorded
+- At least 5 failures inspected
+
+Output Artifact: evals/mvp_eval_results.csv",High,evals,Phase 6 Evaluation,3,7200,2.0,2026-07-05,Sprint 7,High,Mini Evaluation,MVP
+Write failure taxonomy,Task,"Goal: Categorize the failure modes seen during evaluation.
+
+Acceptance Criteria:
+- Failure categories defined
+- Examples included
+- Mitigations proposed
+
+Output Artifact: docs/failure_taxonomy.md",High,evals,Phase 6 Evaluation,3,7200,2.0,2026-07-12,Sprint 8,Medium,Mini Evaluation,MVP
+Summarize MVP eval findings,Task,"Goal: Write a concise eval report that can be used in the portfolio case study.
+
+Acceptance Criteria:
+- Summary includes what worked
+- Summary includes what failed
+- Summary includes next improvements
+
+Output Artifact: docs/mvp_eval_summary.md",High,docs,Phase 6 Evaluation,3,7200,2.0,2026-07-12,Sprint 8,Medium,Mini Evaluation,MVP
+Install QVAC SDK,Spike,"Goal: Attempt to install Tether's QVAC SDK and document setup.
+
+Acceptance Criteria:
+- Installation attempted
+- Commands captured
+- Blockers documented if install fails
+
+Output Artifact: docs/qvac_setup_notes.md",Medium,qvac,Phase 7 QVAC Spike,3,7200,2.0,2026-07-12,Sprint 8,High,QVAC Spike,MVP
+Run QVAC hello world or capture blocker,Spike,"Goal: Try a minimal local completion with QVAC or capture why it could not run.
+
+Acceptance Criteria:
+- Hello-world completion attempted
+- Output saved or blocker documented
+- No MVP dependency created
+
+Output Artifact: outputs/qvac_hello_world.md or docs/qvac_blockers.md",Medium,qvac,Phase 7 QVAC Spike,3,7200,2.0,2026-07-12,Sprint 8,High,QVAC Spike,MVP
+Write QVAC vs Ollama comparison memo,Task,"Goal: Compare QVAC and Ollama from an implementation/product perspective.
+
+Acceptance Criteria:
+- Setup difficulty compared
+- Developer experience compared
+- Recommendation for MVP+1 recorded
+
+Output Artifact: docs/qvac_vs_ollama.md",Medium,qvac,Phase 7 QVAC Spike,2,3600,1.0,2026-07-12,Sprint 8,Medium,QVAC Spike,MVP
+Write product brief,Task,"Goal: Create a concise product brief for Local Scriptorium.
+
+Acceptance Criteria:
+- Problem, user, use cases, non-goals, success metrics included
+- Brief understandable to nontechnical reader
+- Limitations stated
+
+Output Artifact: docs/product_brief.md",High,portfolio,Phase 8 Portfolio,3,7200,2.0,2026-07-19,Sprint 9,Medium,Portfolio Package,MVP
+Create architecture diagram,Task,"Goal: Create a simple architecture diagram showing data flow and local/cloud boundaries.
+
+Acceptance Criteria:
+- Diagram shows sources, chunking, retrieval, local model, output, eval
+- Local boundary is explicit
+- Diagram included in README or docs
+
+Output Artifact: docs/architecture_diagram.png or md",High,portfolio,Phase 8 Portfolio,3,7200,2.0,2026-07-19,Sprint 9,Medium,Portfolio Package,MVP
+Create risk register,Task,"Goal: Document implementation and product risks.
+
+Acceptance Criteria:
+- At least 8 risks listed
+- Each risk has mitigation
+- Privacy, hallucination, retrieval, and hardware constraints included
+
+Output Artifact: docs/risk_register.md",High,risk,Phase 8 Portfolio,3,7200,2.0,2026-07-19,Sprint 9,Medium,Portfolio Package,MVP
+Write README case study,Task,"Goal: Write the main portfolio case study.
+
+Acceptance Criteria:
+- README explains mission, architecture, demo workflow, eval, failures, and next steps
+- README avoids overclaiming
+- README includes sample outputs
+
+Output Artifact: README.md",High,portfolio,Phase 8 Portfolio,5,14400,4.0,2026-07-19,Sprint 9,High,Portfolio Package,MVP
+Create final demo script and screenshots,Task,"Goal: Prepare a repeatable demo and capture evidence.
+
+Acceptance Criteria:
+- Demo script has exact commands
+- Screenshots or output examples saved
+- MVP completion criteria checked
+
+Output Artifact: docs/demo_script.md and screenshots",High,portfolio,Phase 8 Portfolio,3,7200,2.0,2026-07-19,Sprint 9,Medium,Portfolio Package,MVP
