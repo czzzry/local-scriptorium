@@ -14,7 +14,8 @@ Mac model: MacBook Pro
 Model identifier: MacBookPro16,2
 Processor / chip: Quad-Core Intel Core i7
 Memory / RAM: 16 GB
-macOS version: macOS 26.3.1
+macOS version: macOS Tahoe 26.3.1 (a)
+Build version: 25D771280a
 Available storage: 100 GB
 
 ## Why This Matters
