@@ -1,0 +1,52 @@
+[
+    {
+      "id": "P01",
+      "title": "Explain Local Inference",
+      "prompt": "Explain local inference in this project: running a language model on my own Mac instead of using a cloud API. Compare it with cloud inference in concrete terms."
+    },
+    {
+      "id": "P02",
+      "title": "Explain RAG",
+      "prompt": "Explain retrieval-augmented generation in plain English. Use the example of asking questions about a book stored locally on my machine."
+    },
+    {
+      "id": "P03",
+      "title": "Source-Grounded Answer Rules",
+      "prompt": "Give me rules for answering questions using only supplied source excerpts. The answer should avoid making claims that are not supported by the excerpts."
+    },
+    {
+      "id": "P04",
+      "title": "Extract Main Claim",
+      "prompt": "Given this sentence, identify the main claim: \"Dawson treats religion not as one institution within culture, but as a formative center that gives a civilization its symbolic order.\""
+    },
+    {
+      "id": "P05",
+      "title": "Separate Evidence from Interpretation",
+      "prompt": "Explain the difference between evidence and interpretation when answering a question about a historical author."
+    },
+    {
+      "id": "P06",
+      "title": "Identify Uncertainty",
+      "prompt": "A source excerpt says: \"Dawson criticizes purely economic explanations of civilization.\" What can we safely conclude from this, and what can we not conclude?"
+    },
+    {
+      "id": "P07",
+      "title": "Refuse Unsupported Answer",
+      "prompt": "If the supplied sources do not mention Dawson's view of capitalism, how should an AI assistant answer the question \"What did Dawson think of capitalism?\""
+    },
+    {
+      "id": "P08",
+      "title": "Summarize a Passage",
+      "prompt": "Summarize this passage in three bullets: \"A civilization is not held together only by laws, markets, or armies. It also depends on inherited symbols, rituals, loyalties, and assumptions about the sacred.\""
+    },
+    {
+      "id": "P09",
+      "title": "Compare Local and Edge Inference",
+      "prompt": "Explain the difference between local inference on a laptop and edge inference in a company deployment."
+    },
+    {
+      "id": "P10",
+      "title": "Failure Modes",
+      "prompt": "List five ways a local AI research assistant could give a bad answer when asked about a source text."
+    }
+  ]
