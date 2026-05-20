@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment variables / secrets
+.env
+
+# Local/private/copyrighted sources
+sources_private/
+
+# Raw downloaded public-domain candidate texts
+# Kept local for now to avoid accidentally committing large/raw source dumps.
+sources_public/raw/
+
+# Large model files
+models/
+*.gguf
+*.bin
+*.safetensors
+
+# Temporary outputs and logs
+outputs/tmp/
+*.log
+
+# Raw PDFs and scans
+*.pdf
+*.tif
+*.tiff
+*.jpg
+*.jpeg
+*.png
+
+# Common archive files
+*.zip
+*.tar
+*.tar.gz
