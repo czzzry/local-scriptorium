@@ -17,31 +17,51 @@ MAX_WORDS = 750
 
 def count_words(text: str) -> int:
     """Return a rough word count."""
-    return len(re.findall(r"\b\S+\b", text))
+    return len(re.findall(r"\S+", text))
 
 
 def strip_frontmatter(lines: list[str]) -> list[tuple[int, str]]:
     """
     Remove YAML frontmatter from the top of the file, if present.
 
-    Returns a list of:
+    Returns:
     (original_line_number, line_text)
-
-    We keep original line numbers so chunks can be traced back to the cleaned source.
     """
     numbered_lines = list(enumerate(lines, start=1))
 
     if not numbered_lines:
         return []
 
-    first_line = numbered_lines[0][1].strip()
-
-    if first_line != "---":
+    if numbered_lines[0][1].strip() != "---":
         return numbered_lines
 
     for index, (_, line) in enumerate(numbered_lines[1:], start=1):
         if line.strip() == "---":
             return numbered_lines[index + 1 :]
+
+    return numbered_lines
+
+
+def keep_main_text_only(numbered_lines: list[tuple[int, str]]) -> list[tuple[int, str]]:
+    """
+    Skip title-page material, preface, proem, index, and Book I summary.
+
+    For this Boethius MVP, begin at the first actual content section:
+
+    SONG I.
+    BOETHIUS' COMPLAINT.
+
+    This avoids chunking metadata and editorial summaries as if they were
+    primary source argument text.
+    """
+    for i, (_, line) in enumerate(numbered_lines):
+        if line.strip() == "SONG I.":
+            lookahead = "\n".join(
+                text.strip() for _, text in numbered_lines[i : i + 10]
+            )
+
+            if "BOETHIUS' COMPLAINT" in lookahead:
+                return numbered_lines[i:]
 
     return numbered_lines
 
@@ -64,12 +84,13 @@ def split_into_paragraphs(numbered_lines: list[tuple[int, str]]) -> list[dict]:
 
         if stripped == "":
             if current_lines:
+                text = "\n".join(current_lines).strip()
                 paragraphs.append(
                     {
-                        "text": "\n".join(current_lines).strip(),
+                        "text": text,
                         "start_line": current_start_line,
                         "end_line": current_end_line,
-                        "word_count": count_words("\n".join(current_lines)),
+                        "word_count": count_words(text),
                     }
                 )
                 current_lines = []
@@ -84,38 +105,28 @@ def split_into_paragraphs(numbered_lines: list[tuple[int, str]]) -> list[dict]:
         current_end_line = line_number
 
     if current_lines:
+        text = "\n".join(current_lines).strip()
         paragraphs.append(
             {
-                "text": "\n".join(current_lines).strip(),
+                "text": text,
                 "start_line": current_start_line,
                 "end_line": current_end_line,
-                "word_count": count_words("\n".join(current_lines)),
+                "word_count": count_words(text),
             }
         )
 
     return paragraphs
 
 
-def should_force_standalone(paragraph_text: str) -> bool:
-    """
-    Return True when a paragraph should become its own chunk.
-
-    Headings and separators are not very useful alone, so for MVP we do NOT
-    force them into standalone chunks. This function exists so the rule can
-    evolve later.
-    """
-    return False
-
-
 def combine_paragraphs_into_chunks(paragraphs: list[dict]) -> list[dict]:
     """
     Combine paragraphs into chunks.
 
-    Rule:
-    - Prefer chunks around TARGET_WORDS.
-    - Do not exceed MAX_WORDS unless a single paragraph is already huge.
-    - Avoid tiny chunks where possible.
-    - Preserve paragraph breaks.
+    MVP rule:
+    - keep paragraph boundaries
+    - aim for about TARGET_WORDS
+    - avoid chunks over MAX_WORDS when possible
+    - avoid tiny chunks when possible
     """
     chunks = []
 
@@ -147,11 +158,6 @@ def combine_paragraphs_into_chunks(paragraphs: list[dict]) -> list[dict]:
     for paragraph in paragraphs:
         paragraph_text = paragraph["text"]
         paragraph_words = paragraph["word_count"]
-
-        if should_force_standalone(paragraph_text):
-            flush_current()
-            chunks.append(paragraph)
-            continue
 
         would_exceed_max = current_word_count + paragraph_words > MAX_WORDS
         current_is_large_enough = current_word_count >= MIN_WORDS
@@ -203,7 +209,7 @@ def write_chunks(chunks: list[dict]) -> None:
     payload = {
         "source_id": SOURCE_ID,
         "source_file": str(SOURCE_PATH.relative_to(ROOT)),
-        "chunking_method": "paragraph_combination",
+        "chunking_method": "paragraph_combination_skip_front_matter_and_summary",
         "target_words": TARGET_WORDS,
         "min_words": MIN_WORDS,
         "max_words": MAX_WORDS,
@@ -249,6 +255,8 @@ def main() -> None:
     lines = raw_text.splitlines()
 
     content_lines = strip_frontmatter(lines)
+    content_lines = keep_main_text_only(content_lines)
+
     paragraphs = split_into_paragraphs(content_lines)
     chunks_without_ids = combine_paragraphs_into_chunks(paragraphs)
     chunks = add_chunk_ids(chunks_without_ids)
