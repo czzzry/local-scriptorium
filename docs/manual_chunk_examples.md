@@ -108,6 +108,8 @@ mind:
 
 Good candidate chunk. It is coherent, traceable, and self-contained enough to support questions about Philosophy's appearance, the critique of poetic consolation, and the idea of philosophy as medicine. It avoids including the later footnotes and Song II, so the chunk stays focused.
 
+Possible issue: this chunk is coherent, but the identity of the female figure as Philosophy is clearer from the Book I summary and later recognition passage than from this chunk alone. A future chunking system should preserve section/book metadata so retrieved chunks include enough context for grounded answers.
+
 ---
 
 ## Manual Chunk 002
