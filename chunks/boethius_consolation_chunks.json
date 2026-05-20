@@ -1,7 +1,7 @@
 {
   "source_id": "BOETHIUS_CONSOLATION_001",
   "source_file": "sources_public/processed/boethius_consolation_james_clean.md",
-  "chunking_method": "paragraph_combination_skip_front_matter_and_summary",
+  "chunking_method": "paragraph_combination_main_text_only",
   "target_words": 500,
   "min_words": 250,
   "max_words": 750,
@@ -660,9 +660,9 @@
       "source_id": "BOETHIUS_CONSOLATION_001",
       "chunk_index": 73,
       "start_line": 5149,
-      "end_line": 5217,
-      "word_count": 351,
-      "text": "FOOTNOTES:\n\n[S] Plato expressly states the opposite in the 'Timæus' (28B), though\npossibly there the account of the beginning of the world in time is to\nbe understood figuratively, not literally. See Jowett, vol. iii., pp.\n448, 449 (3rd edit.).\n\nEPILOGUE.\n\nWithin a short time of writing 'The Consolation of Philosophy,' Boethius\ndied by a cruel death. As to the manner of his death there is some\nuncertainty. According to one account, he was cut down by the swords of\nthe soldiers before the very judgment-seat of Theodoric; according to\nanother, a cord was first fastened round his forehead, and tightened\ntill 'his eyes started'; he was then killed with a club.\n\n_Elliot Stock, Paternoster Row, London_\n\nREFERENCES TO QUOTATIONS IN THE TEXT.\n\nBk. I., ch. iv., p. 17, l. 6: 'Iliad,' I. 363.\n\n\"     ch. iv., p. 18, l. 7: Plato, 'Republic,'\n        V. 473, D; Jowett, vol. iii., pp. 170, 171\n        (3rd edit.).\n\n\"     ch. iv., p. 22, l. 6: Plato, 'Republic,'\n        I. 347, C; Jowett, III., p. 25.\n\n\"     ch. v., p. 30, l. 19: 'Iliad,' II., 204, 205.\n\nBk. II., ch. ii., p. 50, l. 21: 'Iliad.' XXIV.\n         527, 528.\n\n\"      ch. vii., p. 78, l. 25: Cicero, 'De\n         Republicâ,' VI. 20, in the 'Somnium\n         Scipionis.'\n\nBk. III., ch. iv., p. 106, l. 10: Catullus, LII., 2.\n\n\"       ch. vi., p. 114, l. 4: Euripides, 'Andromache,'\n          319, 320.\n\n\"       ch. ix., p. 129, l. 3: Plato, 'Timæus,'\n          27, C; Jowett, vol. iii., p. 448.\n\n\"       ch. xii., p. 157, l. 14: Quoted Plato,\n          'Sophistes,' 244, E; Jowett, vol. iv.,\n          p. 374.\n\n\"       ch. xii., p. 157, l. 22: Plato, 'Timæus,'\n          29, B; Jowett, vol. iii., p. 449.\n\nBk. IV., ch. vi., p. 206, l. 17: Lucan, 'Pharsalia,'\n         I. 126.\n\n\"      ch. vi., p. 210, l. 23: 'Iliad,' XII. 176.\n\nBk. V., ch. i., p. 227,l. 16: Aristotle, 'Physics,'\n        II. v. 5.\n\n\"     ch. iii., p. 238, l. 20: Horace, 'Satires,'\n        II. v. 59.\n\n\"     ch. iv., p. 243, l. 3: Cicero, 'De Divinatione,'\n        II. 7, 8.\n\n\"     ch. vi., p. 258, l. 8: Aristotle, 'De\n        Cælo,' II. 1."
+      "end_line": 5154,
+      "word_count": 40,
+      "text": "FOOTNOTES:\n\n[S] Plato expressly states the opposite in the 'Timæus' (28B), though\npossibly there the account of the beginning of the world in time is to\nbe understood figuratively, not literally. See Jowett, vol. iii., pp.\n448, 449 (3rd edit.)."
     }
   ]
 }

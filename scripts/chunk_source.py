@@ -44,16 +44,19 @@ def strip_frontmatter(lines: list[str]) -> list[tuple[int, str]]:
 
 def keep_main_text_only(numbered_lines: list[tuple[int, str]]) -> list[tuple[int, str]]:
     """
-    Skip title-page material, preface, proem, index, and Book I summary.
+    Skip title-page material, preface, proem, index, Book I summary,
+    epilogue, and references.
 
-    For this Boethius MVP, begin at the first actual content section:
+    For this Boethius MVP:
+    - begin at the first actual content section: SONG I / BOETHIUS' COMPLAINT
+    - stop before EPILOGUE or REFERENCES TO QUOTATIONS IN THE TEXT
 
-    SONG I.
-    BOETHIUS' COMPLAINT.
-
-    This avoids chunking metadata and editorial summaries as if they were
-    primary source argument text.
+    This keeps the retrieval corpus focused on the main translated work,
+    rather than editor/publisher/reference material.
     """
+    start_index = 0
+    end_index = len(numbered_lines)
+
     for i, (_, line) in enumerate(numbered_lines):
         if line.strip() == "SONG I.":
             lookahead = "\n".join(
@@ -61,9 +64,22 @@ def keep_main_text_only(numbered_lines: list[tuple[int, str]]) -> list[tuple[int
             )
 
             if "BOETHIUS' COMPLAINT" in lookahead:
-                return numbered_lines[i:]
+                start_index = i
+                break
 
-    return numbered_lines
+    stop_markers = [
+        "EPILOGUE.",
+        "REFERENCES TO QUOTATIONS IN THE TEXT.",
+        "REFERENCES TO QUOTATIONS IN THE TEXT",
+    ]
+
+    for i, (_, line) in enumerate(numbered_lines[start_index:], start=start_index):
+        normalized = line.strip().upper()
+        if normalized in [marker.upper() for marker in stop_markers]:
+            end_index = i
+            break
+
+    return numbered_lines[start_index:end_index]
 
 
 def split_into_paragraphs(numbered_lines: list[tuple[int, str]]) -> list[dict]:
@@ -209,7 +225,7 @@ def write_chunks(chunks: list[dict]) -> None:
     payload = {
         "source_id": SOURCE_ID,
         "source_file": str(SOURCE_PATH.relative_to(ROOT)),
-        "chunking_method": "paragraph_combination_skip_front_matter_and_summary",
+        "chunking_method": "paragraph_combination_main_text_only",
         "target_words": TARGET_WORDS,
         "min_words": MIN_WORDS,
         "max_words": MAX_WORDS,
@@ -244,6 +260,16 @@ def print_summary(chunks: list[dict]) -> None:
             f"- {chunk['chunk_id']} "
             f"(lines {chunk['start_line']}-{chunk['end_line']}, "
             f"{chunk['word_count']} words)"
+        )
+
+    if chunks:
+        last = chunks[-1]
+        print()
+        print("Last chunk:")
+        print(
+            f"- {last['chunk_id']} "
+            f"(lines {last['start_line']}-{last['end_line']}, "
+            f"{last['word_count']} words)"
         )
 
 
