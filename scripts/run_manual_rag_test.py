@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = ROOT / "evals" / "manual_rag_questions.md"
 CHUNK_MAP_PATH = ROOT / "evals" / "manual_rag_chunk_map.md"
 CHUNKS_PATH = ROOT / "chunks" / "boethius_consolation_chunks.json"
-OUTPUT_PATH = ROOT / "outputs" / "manual_rag_prompt_test.md"
+OUTPUT_PATH = ROOT / "outputs" / "manual_rag_prompt_test_v2.md"
 
 DEFAULT_MODEL = "llama3.2:1b"
 DEFAULT_QUESTIONS = ["Q01", "Q03", "Q09"]
@@ -26,15 +26,7 @@ def read_text(path: Path) -> str:
 
 
 def clean_model_output(text: str) -> str:
-    """
-    Remove terminal control sequences from captured Ollama output.
-
-    Some Ollama CLI output can include cursor-movement / line-clearing codes
-    when captured by a script. These show up as ugly strings like:
-    ESC[2D ESC[K
-
-    This function strips those artifacts before writing Markdown.
-    """
+    """Remove terminal control sequences from captured Ollama output."""
     text = ANSI_ESCAPE_RE.sub("", text)
     text = text.replace("\r", "")
     return text.strip()
@@ -48,16 +40,6 @@ def load_chunks() -> dict:
 
 
 def extract_question(question_id: str, questions_md: str) -> str:
-    """
-    Extract question text from evals/manual_rag_questions.md.
-
-    Looks for a section like:
-
-    ### Q01: ...
-    Question:
-    ...
-    Question type:
-    """
     pattern = rf"### {question_id}:.*?Question:\s*(.*?)\s*Question type:"
     match = re.search(pattern, questions_md, flags=re.DOTALL)
 
@@ -68,12 +50,6 @@ def extract_question(question_id: str, questions_md: str) -> str:
 
 
 def extract_candidate_chunk_ids(question_id: str, chunk_map_md: str) -> list[str]:
-    """
-    Extract candidate chunk IDs from evals/manual_rag_chunk_map.md.
-
-    Looks inside the question section and finds IDs like:
-    BOETHIUS_CONSOLATION_001_CHUNK_011
-    """
     section_pattern = rf"## {question_id}:.*?(?=\n## Q\d\d:|\n# Findings|\Z)"
     section_match = re.search(section_pattern, chunk_map_md, flags=re.DOTALL)
 
@@ -139,14 +115,31 @@ Words: {chunk["word_count"]}
 
     return f"""You are a source-grounded research assistant.
 
-Use ONLY the supplied source chunks to answer the question.
+You must answer using ONLY the supplied source chunks.
 
-Rules:
-- Cite chunk IDs for claims.
+Important rules:
 - Do not use outside knowledge.
-- If the chunks are insufficient, say what cannot be determined from the supplied chunks.
-- Do not pretend the source says more than it says.
-- Keep the answer concise but specific.
+- Do not guess.
+- Do not add background information unless it is directly supported by the supplied chunks.
+- Every major claim must cite a chunk ID.
+- If the chunks do not answer the question, say: "The supplied chunks are insufficient to answer this."
+- If the chunks partially answer the question, answer only the supported part and say what is missing.
+- Prefer a cautious answer over an impressive answer.
+
+Use exactly this answer format:
+
+Direct answer:
+[1-3 sentences answering the question. Include chunk IDs.]
+
+Evidence:
+- [CHUNK_ID]&#58; [short quote or close paraphrase from the chunk]
+- [CHUNK_ID]&#58; [short quote or close paraphrase from the chunk]
+
+What the chunks do not show:
+[Say what cannot be determined from the supplied chunks. If the chunks are sufficient, say "No major missing evidence for this question."]
+
+Confidence:
+[High / Medium / Low] — [one sentence explaining why]
 
 Question ID: {question_id}
 
@@ -166,8 +159,7 @@ def run_ollama(model: str, prompt: str) -> str:
     Run the prompt through Ollama using stdin.
 
     First tries --nowordwrap to avoid terminal cursor-control artifacts.
-    If the local Ollama version does not support that flag, it falls back
-    to normal ollama run and still cleans captured output.
+    If the local Ollama version does not support that flag, it falls back.
     """
     commands_to_try = [
         ["ollama", "run", "--nowordwrap", model],
@@ -194,7 +186,6 @@ def run_ollama(model: str, prompt: str) -> str:
             f"STDERR:\n{result.stderr}"
         )
 
-        # If --nowordwrap is unsupported, try the fallback command.
         if "--nowordwrap" in command:
             continue
 
@@ -234,7 +225,7 @@ def append_result_block(
             ungrounded_answer,
             "```",
             "",
-            "### Grounded Local Model Answer",
+            "### Grounded Local Model Answer — Strict Format",
             "",
             "```text",
             grounded_answer,
@@ -242,11 +233,19 @@ def append_result_block(
             "",
             "### Comparison Notes",
             "",
-            "TODO: Did the grounded answer improve accuracy, specificity, caution, and citation behavior?",
+            "TODO: Compare this v2 grounded answer against the v1 grounded answer.",
+            "",
+            "Questions to check:",
+            "",
+            "- Did the answer follow the required structure?",
+            "- Did it cite chunk IDs?",
+            "- Did it avoid outside knowledge?",
+            "- Did it identify insufficient evidence where appropriate?",
+            "- Did it improve over the v1 grounded answer?",
             "",
             "### Grounding Issues",
             "",
-            "TODO: Did the model cite unsupported claims, ignore chunks, or use outside knowledge?",
+            "TODO: Note remaining hallucinations, unsupported claims, missing citations, or bad interpretation.",
             "",
             "---",
             "",
@@ -275,7 +274,7 @@ def main() -> None:
     chunks_by_id = load_chunks()
 
     output_lines = [
-        "# Manual RAG Prompt Test",
+        "# Manual RAG Prompt Test V2",
         "",
         f"Date: {datetime.now().isoformat(timespec='seconds')}",
         "",
@@ -283,9 +282,11 @@ def main() -> None:
         "",
         "## Goal",
         "",
-        "Compare local model answers with and without supplied source chunks.",
+        "Rerun the manual RAG prompt test with a stricter grounded answer format.",
         "",
-        "This tests whether grounded prompts improve answer quality and whether the model follows source-use rules.",
+        "This keeps the same model, questions, and manually selected chunks as the first run, but changes the grounded prompt format.",
+        "",
+        "The goal is to test whether prompt structure improves citation discipline, evidence use, and insufficient-evidence handling.",
         "",
         "---",
         "",
@@ -310,7 +311,7 @@ def main() -> None:
         print("  Running ungrounded prompt...")
         ungrounded_answer = run_ollama(args.model, ungrounded_prompt)
 
-        print("  Running grounded prompt...")
+        print("  Running grounded prompt v2...")
         grounded_answer = run_ollama(args.model, grounded_prompt)
 
         append_result_block(
@@ -326,7 +327,7 @@ def main() -> None:
     OUTPUT_PATH.write_text("\n".join(output_lines), encoding="utf-8")
 
     print()
-    print("Manual RAG prompt test complete.")
+    print("Manual RAG prompt test v2 complete.")
     print(f"Output written to: {OUTPUT_PATH}")
 
 
