@@ -61,7 +61,11 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Strong result. Hybrid retrieval found all manually expected chunks in the top 5.
+Strong result.
+
+Hybrid retrieval found both expected chunks in the top 5. This is an excellent example of why hybrid retrieval is useful: BM25 strongly favored the opening chunk (`CHUNK_001`), while vector retrieval helped surface the later context chunk (`CHUNK_003`) that identifies the female figure as Philosophy.
+
+Takeaway: hybrid retrieval successfully combined exact-word matching and semantic similarity for an interpretive question.
 
 ---
 
@@ -105,7 +109,11 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Strong result. Hybrid retrieval found all manually expected chunks in the top 5.
+Strong result.
+
+Hybrid retrieval found the expected opening complaint chunk as the top result. Both BM25 and vector retrieval agreed on `CHUNK_001`, which is a good sign that this question is well supported by the corpus and easy for retrieval.
+
+Takeaway: when both lexical and semantic signals point to the same chunk, retrieval confidence is higher.
 
 ---
 
@@ -151,7 +159,13 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Weak-to-partial result. Hybrid retrieval found some expected evidence, but missed most of the manual map.
+Weak-to-partial result.
+
+Hybrid retrieval found `CHUNK_011`, but missed `CHUNK_012` and `CHUNK_014`. This is still better than the vector-only result, which retrieved none of the expected Fortune chunks, but it remains incomplete.
+
+The top result, `CHUNK_010`, is thematically adjacent because it mentions Fortune and Boethius' sickness, but it is not part of the manual evidence map for Fortune's nature. This is a useful false positive.
+
+Takeaway: hybrid retrieval improved the Fortune question compared with vector-only retrieval, but exact-term and semantic signals still did not fully recover the expected evidence chain.
 
 ---
 
@@ -202,7 +216,13 @@ Max possible Recall@5 for this question: 0.62
 
 ### Notes
 
-Weak-to-partial result. Hybrid retrieval found some expected evidence, but missed most of the manual map.
+Weak-to-partial result.
+
+Hybrid retrieval found three expected chunks: `CHUNK_034`, `CHUNK_025`, and `CHUNK_026`. That is a useful improvement for a broad synthesis question, but the manual evidence map contains eight chunks, so top-5 retrieval cannot capture the full argument.
+
+This question may require query decomposition or a higher top-K because it asks about several false goods at once: wealth, rank, power, glory, pleasure, and true happiness.
+
+Takeaway: hybrid retrieval helps, but broad synthesis questions may need multi-step retrieval rather than a single top-5 search.
 
 ---
 
@@ -251,7 +271,13 @@ Max possible Recall@5 for this question: 0.83
 
 ### Notes
 
-Partial-to-good result. Hybrid retrieval found a meaningful portion of the expected evidence, but did not fully reproduce the manual evidence map.
+Partial-to-good result.
+
+Hybrid retrieval found three central expected chunks: `CHUNK_036`, `CHUNK_025`, and `CHUNK_037`. These cover the argument around perfect good, happiness, and God.
+
+However, it missed other expected chunks that help complete the surrounding argument. Precision was decent, but recall remains limited by top-5 retrieval and the breadth of the manual evidence map.
+
+Takeaway: hybrid retrieval works reasonably well for core conceptual questions with shared vocabulary, but may still miss surrounding argumentative context.
 
 ---
 
@@ -296,7 +322,11 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Strong result. Hybrid retrieval found all manually expected chunks in the top 5.
+Strong result.
+
+Hybrid retrieval found both expected chunks for providence and fate. This is a clean success case because the question uses distinctive technical terms that appear directly in the source.
+
+Takeaway: hybrid retrieval performs very well when the question contains rare, source-specific terms.
 
 ---
 
@@ -344,7 +374,13 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Weak-to-partial result. Hybrid retrieval found some expected evidence, but missed most of the manual map.
+Weak-to-partial result.
+
+Hybrid retrieval found two expected chunks: `CHUNK_047` and `CHUNK_046`. These are important parts of the argument about power, will, and the weakness of the wicked.
+
+However, it missed several surrounding chunks in the manual evidence map and retrieved some thematically adjacent but non-expected chunks. This question requires reconstructing a philosophical argument across multiple passages.
+
+Takeaway: hybrid retrieval can find pieces of a multi-step argument, but does not reliably recover the whole chain of reasoning.
 
 ---
 
@@ -391,7 +427,13 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Partial-to-good result. Hybrid retrieval found a meaningful portion of the expected evidence, but did not fully reproduce the manual evidence map.
+Partial-to-good result.
+
+Hybrid retrieval found `CHUNK_058` and `CHUNK_059`, including the important passage where Philosophy argues that fortune which tries or amends is good. This improves over vector-only retrieval, which found fewer expected chunks.
+
+However, it missed the earlier expected chunks that build up the argument.
+
+Takeaway: hybrid retrieval can find the answer-bearing passage, but may miss preparatory context.
 
 ---
 
@@ -440,7 +482,13 @@ Max possible Recall@5 for this question: 0.83
 
 ### Notes
 
-Weak result. Hybrid retrieval found none of the manually expected chunks in the top 5.
+Weak result.
+
+Hybrid retrieval found none of the expected chunks. This is not surprising because Q09 is an insufficient-evidence question: it asks whether the selected chunks prove explicit Christianity.
+
+Retrieval methods are poor at proving absence. They can retrieve theological language, God-language, or religiously adjacent passages, but they cannot by themselves determine whether the work is explicitly Christian.
+
+Takeaway: Q09 is primarily a generation/evidence-discipline test, not a normal retrieval test.
 
 ---
 
@@ -488,7 +536,13 @@ Max possible Recall@5 for this question: 1.00
 
 ### Notes
 
-Weak-to-partial result. Hybrid retrieval found some expected evidence, but missed most of the manual map.
+Weak-to-partial result.
+
+Hybrid retrieval found `CHUNK_007` and `CHUNK_006`, which are relevant to accusation and ruin. It missed several surrounding chunks that help establish the broader historical circumstances.
+
+This is an improvement over simple keyword retrieval, but still incomplete.
+
+Takeaway: vector similarity helped retrieve contextually relevant accusation material, while BM25 still introduced some noisy false positives.
 
 ---
 
@@ -498,14 +552,64 @@ Average Recall@5: 0.55
 
 Average Precision@5: 0.36
 
+## Baseline Comparison
+
+| Retrieval Method | Average Recall@5 | Average Precision@5 | Summary |
+|---|---:|---:|---|
+| Keyword count | 0.34 | Not measured | Crude baseline; useful for debugging but brittle |
+| BM25 | 0.47 | 0.30 | Stronger lexical baseline; good for exact terms |
+| Vector | 0.49 | 0.34 | Semantic baseline; better overall than lexical-only but uneven |
+| Hybrid | 0.55 | 0.36 | Best overall result; combines lexical and semantic signals |
+
+Hybrid retrieval is the strongest MVP retrieval strategy so far.
+
+It improves over keyword count, BM25, and vector-only retrieval on average, but it does not solve every question type. Its main remaining weaknesses are broad synthesis questions and insufficient-evidence questions.
+
 ## Interpretation
 
-Hybrid retrieval combines exact-word lexical matching with semantic vector similarity.
+Hybrid retrieval combines two different retrieval signals:
 
-A strong hybrid result would suggest that BM25 and vector retrieval complement each other. A weak hybrid result would suggest that weighting, query design, chunk quality, or the manual evidence map need further review.
+- BM25 lexical matching, which rewards exact source terms like `fortune`, `providence`, `fate`, `happiness`, and `highest good`
+- vector similarity, which can retrieve semantically related chunks even when the exact question words differ from the source wording
 
-The default weights are intentionally simple: 50 percent BM25 and 50 percent vector. This avoids tuning the result to a tiny eval set.
+The hybrid result is strongest overall because the Boethius question set includes both exact-term questions and interpretive/contextual questions.
+
+The best example is Q01. BM25 strongly retrieved the opening complaint/Muses chunk, while vector retrieval helped surface the later chunk that explicitly identifies the woman as Philosophy. Together, hybrid retrieval found both expected chunks.
+
+However, hybrid retrieval still failed Q09. This is expected because Q09 is not a normal "find the matching passage" question. It asks whether the supplied chunks are enough to prove explicit Christianity. That requires evidence discipline and answer-generation caution, not just better retrieval.
 
 ## Decision
 
-Compare this result against the keyword, BM25, and vector baselines. Use the comparison to decide which retrieval method is strongest for the MVP.
+Use hybrid retrieval as the MVP retrieval strategy.
+
+Do not tune weights yet. The current setup uses:
+
+```text
+BM25: 0.50
+Vector: 0.50
+```
+
+This simple 50/50 weighting avoids overfitting to a tiny 10-question eval set.
+
+## Remaining Limitations
+
+- Broad synthesis questions may need more than top-5 retrieval.
+- Insufficient-evidence questions require answer-generation discipline, not just retrieval.
+- Some retrieved misses are thematically related but not part of the manual evidence map.
+- The manual evidence map itself should be treated as a first-pass evaluation set, not an absolute authority.
+
+## Next Step
+
+Package the MVP.
+
+The retrieval experimentation phase is complete enough for the portfolio version. The next work should be:
+
+- README update
+- architecture diagram
+- project case study
+- evaluation summary
+- known limitations
+- example run instructions
+
+The project should now be framed as a local RAG evaluation pipeline, not a polished chatbot.
+
