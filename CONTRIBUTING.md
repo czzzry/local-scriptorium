@@ -14,4 +14,3 @@ scriptorium ingest
 scriptorium evaluate --split test --deterministic
 scriptorium report
 ```
-

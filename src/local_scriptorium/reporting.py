@@ -119,4 +119,3 @@ def write_reports(output: Path, results: dict, answers: dict, metadata: dict) ->
     (output / "report.md").write_text(markdown, encoding="utf-8")
     (output / "report.html").write_text(html_report(markdown), encoding="utf-8")
     (output / "retrieval_summary.csv").write_text(retrieval_csv(results), encoding="utf-8")
-

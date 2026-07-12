@@ -19,4 +19,3 @@ class MetricsTests(unittest.TestCase):
 
     def test_aggregate(self):
         self.assertEqual(aggregate([{"x": 0.0}, {"x": 1.0}]), {"x": 0.5})
-

@@ -89,4 +89,3 @@ class Retriever:
             scores.append((chunk["chunk_id"], score))
         ranked = sorted(scores, key=lambda item: (-item[1], item[0]))[:top_k]
         return [SearchResult(chunk_id=cid, score=score, rank=rank) for rank, (cid, score) in enumerate(ranked, 1)]
-

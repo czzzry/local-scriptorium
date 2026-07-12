@@ -12,4 +12,3 @@ class OutputIsolationTests(unittest.TestCase):
             if "OUTPUT_PATH" in text or "OUTPUT_LOG_PATH" in text:
                 if path.name not in {"chunk_source.py", "clean_gutenberg_text.py"}:
                     self.assertIn('"generated"', text, path.name)
-

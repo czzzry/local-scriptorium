@@ -24,4 +24,3 @@ class RetrievalTests(unittest.TestCase):
             self.retriever.search("x", "dense")
         with self.assertRaises(ValueError):
             self.retriever.search("x", top_k=0)
-

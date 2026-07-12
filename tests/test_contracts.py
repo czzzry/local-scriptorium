@@ -28,4 +28,3 @@ class ContractTests(unittest.TestCase):
         questions = read_json(ROOT / "data/evaluation/questions.v1.json")
         with self.assertRaises(ContractError):
             validate_questions(questions, {"not-a-real-chunk"})
-

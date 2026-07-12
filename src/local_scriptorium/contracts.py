@@ -106,4 +106,3 @@ def validate_questions(data: dict[str, Any], chunk_ids: set[str] | None = None) 
         splits.add(item["split"])
     if splits != {"dev", "test"}:
         raise ContractError("dataset must contain both dev and held-out test splits")
-

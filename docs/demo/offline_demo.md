@@ -21,4 +21,3 @@ $ scriptorium report
 ```
 
 The retrieved chunk states that providence is the unified divine foreview while fate is that order unfolded through time. A cited answer may use that distinction and cite `...CHUNK_055`; it should not add historical or theological claims absent from retrieved evidence.
-

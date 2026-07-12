@@ -23,4 +23,3 @@ jobs:
       - run: scriptorium evaluate --split test --deterministic
       - run: scriptorium report
       - run: python scripts/privacy_check.py
-

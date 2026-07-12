@@ -35,4 +35,3 @@ class CliTests(unittest.TestCase):
     def test_default_split_is_development(self):
         from local_scriptorium.cli import parser
         self.assertEqual(parser().parse_args(["evaluate"]).split, "dev")
-

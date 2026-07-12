@@ -12,4 +12,3 @@
 ## 0.1.0 — Manual MVP
 
 - Established the Boethius corpus, stable chunks, ten manual questions, historical lexical/dense retrieval experiments, and local Ollama generation notes.
-

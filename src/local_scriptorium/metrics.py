@@ -38,4 +38,3 @@ def bootstrap_ci(values: list[float], seed: int = 42, samples: int = 2000) -> tu
     rng = random.Random(seed)
     means = sorted(mean(rng.choices(values, k=len(values))) for _ in range(samples))
     return means[int(samples * 0.025)], means[min(samples - 1, int(samples * 0.975))]
-

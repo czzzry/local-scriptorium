@@ -14,4 +14,3 @@ class RegressionTests(unittest.TestCase):
         result = evaluate_retrieval(corpus, questions, "test")
         # A loose guard catches major ranking/data breakage without claiming a quality target.
         self.assertGreaterEqual(result["methods"]["bm25"]["summary"]["hit_rate@5"], 0.45)
-
