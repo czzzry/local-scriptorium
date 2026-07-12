@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = ROOT / "evals" / "manual_rag_questions.md"
 CHUNK_MAP_PATH = ROOT / "evals" / "manual_rag_chunk_map.md"
 CHUNKS_PATH = ROOT / "chunks" / "boethius_consolation_chunks.json"
-OUTPUT_PATH = ROOT / "outputs" / "bm25_retrieval_eval.md"
+OUTPUT_PATH = ROOT / "outputs" / "generated" / "legacy" / "bm25_retrieval_eval.md"
 
 TOP_K = 5
 
@@ -195,8 +195,6 @@ def retrieve_bm25(question: str, index: dict, top_k: int = TOP_K) -> list[dict]:
 
 def calculate_metrics(expected: list[str], retrieved: list[str]) -> dict:
     expected_set = set(expected)
-    retrieved_set = set(retrieved)
-
     hits = [chunk_id for chunk_id in retrieved if chunk_id in expected_set]
 
     if expected_set:

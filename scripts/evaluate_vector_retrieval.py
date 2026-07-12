@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = ROOT / "evals" / "manual_rag_questions.md"
 CHUNK_MAP_PATH = ROOT / "evals" / "manual_rag_chunk_map.md"
 CHUNKS_PATH = ROOT / "chunks" / "boethius_consolation_chunks.json"
-OUTPUT_PATH = ROOT / "outputs" / "vector_retrieval_eval.md"
+OUTPUT_PATH = ROOT / "outputs" / "generated" / "legacy" / "vector_retrieval_eval.md"
 
 DEFAULT_MODEL = "embeddinggemma"
 OLLAMA_EMBED_URL = "http://localhost:11434/api/embed"

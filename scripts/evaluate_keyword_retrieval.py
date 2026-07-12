@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = ROOT / "evals" / "manual_rag_questions.md"
 CHUNK_MAP_PATH = ROOT / "evals" / "manual_rag_chunk_map.md"
 CHUNKS_PATH = ROOT / "chunks" / "boethius_consolation_chunks.json"
-OUTPUT_PATH = ROOT / "outputs" / "keyword_retrieval_eval.md"
+OUTPUT_PATH = ROOT / "outputs" / "generated" / "legacy" / "keyword_retrieval_eval.md"
 
 TOP_K = 5
 

@@ -23,9 +23,17 @@ models/
 *.bin
 *.safetensors
 
-# Temporary outputs and logs
+# Machine-generated evaluation artifacts. Curated analysis lives in docs/analysis/.
+outputs/generated/
 outputs/tmp/
 *.log
+
+# Tooling and test caches
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
 
 # Raw PDFs and scans
 *.pdf

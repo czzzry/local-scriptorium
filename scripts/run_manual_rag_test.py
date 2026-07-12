@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = ROOT / "evals" / "manual_rag_questions.md"
 CHUNK_MAP_PATH = ROOT / "evals" / "manual_rag_chunk_map.md"
 CHUNKS_PATH = ROOT / "chunks" / "boethius_consolation_chunks.json"
-OUTPUT_PATH = ROOT / "outputs" / "manual_rag_prompt_test_v2.md"
+OUTPUT_PATH = ROOT / "outputs" / "generated" / "legacy" / "manual_rag_prompt_test_v2.md"
 
 DEFAULT_MODEL = "llama3.2:1b"
 DEFAULT_QUESTIONS = ["Q01", "Q03", "Q09"]

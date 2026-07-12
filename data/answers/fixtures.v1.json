@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "description": "Human-curated deterministic fixtures. Labels are regression heuristics, not ground truth.",
+  "answers": [
+    {"answer_id":"ANS-001","question_id":"DEV-006","answerable":true,"retrieved_chunk_ids":["BOETHIUS_CONSOLATION_001_CHUNK_011"],"response_type":"answer","answer":"Fortune remains true to her mutable nature; gifts that arrive may depart.","citations":["BOETHIUS_CONSOLATION_001_CHUNK_011"],"unsupported_claims":[]},
+    {"answer_id":"ANS-002","question_id":"DEV-014","answerable":true,"retrieved_chunk_ids":["BOETHIUS_CONSOLATION_001_CHUNK_025"],"response_type":"answer","answer":"All mortal pursuits seek happiness, understood as the complete good.","citations":["BOETHIUS_CONSOLATION_001_CHUNK_025"],"unsupported_claims":[]},
+    {"answer_id":"ANS-003","question_id":"TEST-001","answerable":true,"retrieved_chunk_ids":["BOETHIUS_CONSOLATION_001_CHUNK_055"],"response_type":"answer","answer":"Providence is the simple divine plan; fate unfolds that plan in temporal sequence.","citations":["BOETHIUS_CONSOLATION_001_CHUNK_055"],"unsupported_claims":[]},
+    {"answer_id":"ANS-004","question_id":"OUT-001","answerable":false,"retrieved_chunk_ids":[],"response_type":"refusal","answer":"The supplied corpus does not establish the publication sales figures.","citations":[],"unsupported_claims":[]},
+    {"answer_id":"ANS-005","question_id":"OUT-002","answerable":false,"retrieved_chunk_ids":["BOETHIUS_CONSOLATION_001_CHUNK_037"],"response_type":"refusal","answer":"This passage does not establish Boethius's exact date of death.","citations":[],"unsupported_claims":[]}
+  ]
+}
+

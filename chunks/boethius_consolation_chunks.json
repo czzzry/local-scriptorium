@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0",
   "source_id": "BOETHIUS_CONSOLATION_001",
   "source_file": "sources_public/processed/boethius_consolation_james_clean.md",
   "chunking_method": "paragraph_combination_main_text_only",

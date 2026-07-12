@@ -1,78 +1,27 @@
 {
-    "schema_version": "0.1",
-    "project": "Local Scriptorium",
-    "active_mvp_source_id": "BOETHIUS_CONSOLATION_001",
-    "notes": "This manifest records candidate and active sources for the Local Scriptorium MVP. Raw downloaded files are kept local for now. The active MVP source will be cleaned and processed before chunking.",
-    "sources": [
-      {
-        "source_id": "BOETHIUS_CONSOLATION_001",
-        "title": "The Consolation of Philosophy",
-        "author": "Boethius",
-        "translator": "H. R. James",
-        "source_type": "primary_text_translation",
-        "public_private_status": "public_candidate",
-        "include_in_mvp": true,
-        "ingestion_status": "raw_downloaded_not_cleaned",
-        "local_raw_path": "sources_public/raw/boethius_consolation_james.txt",
-        "processed_path": "sources_public/processed/boethius_consolation_james_clean.md",
-        "source_url": "https://www.gutenberg.org/ebooks/14328",
-        "notes": "Selected as the first active MVP source because it is philosophically dense, structured, and manageable for first-pass chunking and retrieval tests."
-      },
-      {
-        "source_id": "PLATO_APOLOGY_001",
-        "title": "Apology",
-        "author": "Plato",
-        "translator": "Benjamin Jowett",
-        "source_type": "primary_text_translation",
-        "public_private_status": "public_candidate",
-        "include_in_mvp": false,
-        "ingestion_status": "raw_downloaded_not_cleaned",
-        "local_raw_path": "sources_public/raw/plato_apology_jowett.txt",
-        "processed_path": null,
-        "source_url": "https://www.gutenberg.org/ebooks/1656",
-        "notes": "Candidate source for later testing. Not part of the first MVP corpus."
-      },
-      {
-        "source_id": "PLATO_APOLOGY_CRITO_PHAEDO_001",
-        "title": "Apology, Crito, and Phaedo",
-        "author": "Plato",
-        "translator": "Benjamin Jowett",
-        "source_type": "primary_text_translation",
-        "public_private_status": "public_candidate",
-        "include_in_mvp": false,
-        "ingestion_status": "raw_downloaded_not_cleaned",
-        "local_raw_path": "sources_public/raw/plato_apology_crito_phaedo.txt",
-        "processed_path": null,
-        "source_url": "https://www.gutenberg.org/ebooks/13726",
-        "notes": "Candidate source for later testing. Not part of the first MVP corpus."
-      },
-      {
-        "source_id": "AUGUSTINE_CONFESSIONS_001",
-        "title": "Confessions",
-        "author": "Augustine of Hippo",
-        "translator": "E. B. Pusey",
-        "source_type": "primary_text_translation",
-        "public_private_status": "public_candidate",
-        "include_in_mvp": false,
-        "ingestion_status": "raw_downloaded_not_cleaned",
-        "local_raw_path": "sources_public/raw/augustine_confessions_pusey.txt",
-        "processed_path": null,
-        "source_url": "https://www.gutenberg.org/ebooks/3296",
-        "notes": "Candidate source for later testing. Larger than the first MVP source."
-      },
-      {
-        "source_id": "AUGUSTINE_CITY_OF_GOD_VOL1_001",
-        "title": "The City of God, Volume I",
-        "author": "Augustine of Hippo",
-        "translator": "Marcus Dods",
-        "source_type": "primary_text_translation",
-        "public_private_status": "public_candidate",
-        "include_in_mvp": false,
-        "ingestion_status": "raw_downloaded_not_cleaned",
-        "local_raw_path": "sources_public/raw/augustine_city_of_god_vol1_dods.txt",
-        "processed_path": null,
-        "source_url": "https://www.gutenberg.org/ebooks/45304",
-        "notes": "Candidate source for later testing. Larger and more complex than the first MVP source."
-      }
-    ]
-  }
+  "schema_version": "1.0",
+  "manifest_id": "local-scriptorium-public-corpus-v1",
+  "project": "Local Scriptorium",
+  "sources": [
+    {
+      "source_id": "BOETHIUS_CONSOLATION_001",
+      "title": "The Consolation of Philosophy",
+      "author": "Boethius",
+      "translator": "H. R. James",
+      "source_url": "https://www.gutenberg.org/ebooks/14328",
+      "license": "Project Gutenberg License; source text public domain in the United States",
+      "checksum_sha256": "4d00df8ca7760d8a84524bef68e6d6433533b5380cbf75d2dfbb64e9860320f7",
+      "ingested_at": "2026-05-17",
+      "permitted_use": "research, evaluation, redistribution subject to the Project Gutenberg License and local law",
+      "processed_path": "sources_public/processed/boethius_consolation_james_clean.md",
+      "corpus_role": "active_evaluation_source"
+    }
+  ],
+  "excluded_candidates": [
+    "PLATO_APOLOGY_001",
+    "PLATO_APOLOGY_CRITO_PHAEDO_001",
+    "AUGUSTINE_CONFESSIONS_001",
+    "AUGUSTINE_CITY_OF_GOD_VOL1_001"
+  ],
+  "notes": "Excluded candidates existed only as ignored local downloads and lack committed checksums; they are not part of the reproducible corpus."
+}
