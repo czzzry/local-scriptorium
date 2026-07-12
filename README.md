@@ -21,7 +21,7 @@ These measurements cover one public-domain translation and a manually curated 20
 
 ## Why this exists
 
-Confident prose can hide two different failures: missing evidence and misuse of evidence. This project makes them inspectable independently. It is primarily an evaluation harness—not a chatbot or a claim that one retrieval recipe is universally best.
+Confident prose can hide two different failures: missing evidence and misuse of evidence. This project makes them inspectable independently. It is primarily an evaluation harness, not a chatbot or a claim that one retrieval recipe is universally best.
 
 ## Architecture
 
@@ -71,7 +71,7 @@ Commands return non-zero status for invalid data or arguments and emit machine-r
 
 ## Evaluation methodology
 
-The dataset contains 50 evidence-backed questions: 30 development and 20 held-out test. Each question maps to one or more chunk IDs with graded relevance (1–3). The harness reports Recall@5, Precision@5, Hit Rate@5, MRR, and nDCG@5. Seeded, 2,000-sample non-parametric bootstrap confidence intervals estimate variation over questions.
+The dataset contains 50 evidence-backed questions: 30 development and 20 held-out test. Each question maps to one or more chunk IDs with graded relevance (1-3). The harness reports Recall@5, Precision@5, Hit Rate@5, MRR, and nDCG@5. Seeded, 2,000-sample non-parametric bootstrap confidence intervals estimate variation over questions.
 
 The failure taxonomy distinguishes complete misses, partial evidence, low rank, distractor-heavy results, and successful retrieval. Grounded-answer fixtures check citation membership, curated unsupported-claim labels, answerability, and refusal behavior. Those checks are explicitly heuristic and not objective ground truth.
 
@@ -96,7 +96,7 @@ Dense Ollama results must be labelled separately from the offline TF-IDF baselin
 
 ## Data contracts and provenance
 
-All active JSON artifacts declare schema version `1.0`. The source manifest requires source, license, SHA-256 checksum, ingestion date, permitted use, and portable processed path. Ingestion rejects missing, malformed, absent, or checksum-mismatched sources. See [DATA_CORPUS_NOTICE.md](DATA_CORPUS_NOTICE.md).
+All active JSON artifacts declare schema version `1.0`. The source manifest requires source, license, SHA-256 checksum, ingestion date, permitted use, and portable processed path. Ingestion rejects missing, malformed, absent, or checksum-mismatched sources. See [DATA_CORPUS_NOTICE.md](DATA_CORPUS_NOTICE.md) and [CORPUS_NOTICE.md](CORPUS_NOTICE.md).
 
 Committed inputs include the processed public-domain source, chunk corpus, question judgments, and deterministic answer fixtures. Machine runs, embedding caches, local models, raw downloads, private sources, and credentials are ignored. Curated interpretation belongs in `docs/analysis/`; generated evidence belongs in `outputs/generated/`.
 
@@ -128,5 +128,6 @@ See [docs/data_contracts.md](docs/data_contracts.md), [docs/analysis/v0.2_method
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [SECURITY.md](SECURITY.md)
 - [CHANGELOG.md](CHANGELOG.md)
+- [CORPUS_NOTICE.md](CORPUS_NOTICE.md)
 - [DATA_CORPUS_NOTICE.md](DATA_CORPUS_NOTICE.md)
 - [docs/demo/offline_demo.md](docs/demo/offline_demo.md)
