@@ -1,290 +1,132 @@
 # Local Scriptorium
 
-Local Scriptorium is a local RAG-style research assistant experiment built to test source-grounded question answering over public-domain texts.
+Local Scriptorium is a small, reproducible harness for evaluating retrieval-augmented generation (RAG) locally. It asks two separate questions: did retrieval find the evidence, and did an answer stay within that evidence? The default path is deterministic, offline, and requires no model server, API key, or network access.
 
-The goal is not to build a polished chatbot. The goal is to understand and demonstrate the core pipeline behind trustworthy retrieval-augmented generation:
+## Results at a glance
 
-```text
-source text
-→ cleaning
-→ chunking
-→ retrieval
-→ grounded prompting
-→ evaluation
-```
+The committed values below come from the v0.2 held-out test artifact and must be refreshed from an actual run before release.
 
-The first MVP uses Boethius’ *The Consolation of Philosophy* as the evaluated source corpus.
+<!-- BENCHMARK_START -->
+| Method | Recall@5 | Precision@5 | Hit rate@5 | MRR | nDCG@5 |
+|---|---:|---:|---:|---:|---:|
+| Keyword | 0.742 | 0.210 | 0.900 | 0.643 | 0.592 |
+| BM25 | 0.808 | 0.230 | 0.900 | **0.729** | **0.715** |
+| Offline TF-IDF vector | **0.833** | **0.230** | **0.950** | 0.685 | 0.690 |
+| Hybrid RRF | 0.808 | **0.230** | 0.900 | 0.693 | 0.694 |
 
-## Why This Project Exists
+On the 20-question held-out split, the vector baseline had the highest Recall@5 (95% bootstrap CI 0.700–0.933); BM25 had the highest MRR and nDCG@5. The overlapping uncertainty and small dataset do not support declaring a universal winner.
+<!-- BENCHMARK_END -->
 
-Modern AI assistants often sound confident even when their answers are weakly grounded.
+These measurements cover one public-domain translation and a manually curated 20-question held-out split. They are regression evidence, not proof of general RAG quality.
 
-This project explores a practical question:
+## Why this exists
 
-> Can a local AI system retrieve the right source evidence and use it to answer questions accurately?
+Confident prose can hide two different failures: missing evidence and misuse of evidence. This project makes them inspectable independently. It is primarily an evaluation harness—not a chatbot or a claim that one retrieval recipe is universally best.
 
-To answer that, Local Scriptorium separates two problems that are often blurred together:
-
-1. **Retrieval quality**  
-   Did the system find the right chunks?
-
-2. **Generation quality**  
-   Did the model use those chunks correctly?
-
-The current MVP focuses heavily on retrieval evaluation and documents where local grounded generation succeeds or fails.
-
-## MVP Scope
-
-Evaluated source:
-
-- Boethius, *The Consolation of Philosophy*
-- Translator: H. R. James
-- Source type: public-domain English translation
-- Source ID: `BOETHIUS_CONSOLATION_001`
-
-Candidate sources downloaded but not yet evaluated:
-
-- Plato, *Apology*
-- Plato, *Apology / Crito / Phaedo*
-- Augustine, *Confessions*
-- Augustine, *City of God*, Vol. I
-
-Only Boethius is included in the current retrieval evaluation.
-
-## Current Pipeline
+## Architecture
 
 ```mermaid
-flowchart TD
-    A[Public-domain source text] --> B[Clean source text]
-    B --> C[Chunk source into evidence units]
-    C --> D[Assign stable chunk IDs]
-    D --> E[Create manual RAG questions]
-    E --> F[Create manual evidence map]
-    F --> G[Evaluate retrieval baselines]
-    G --> H[Run grounded prompt tests]
-    H --> I[Document findings and limitations]
+flowchart LR
+  M[Versioned source manifest] --> I[Ingest + provenance validation]
+  S[Public-domain source] --> I
+  I --> C[Versioned chunk corpus]
+  Q[Dev / held-out questions + judgments] --> E[Retrieval evaluation]
+  C --> R[Keyword / BM25 / TF-IDF vector / hybrid]
+  R --> E
+  A[Curated answer fixtures] --> G[Grounded-answer checks]
+  E --> O[Raw JSON + CSV]
+  G --> O
+  O --> P[Derived Markdown + HTML report]
 ```
 
-## Repository Structure
+The `src/local_scriptorium/` package owns contracts, ranking, metrics, orchestration, and reporting. Historical scripts remain available, but their new outputs are isolated under `outputs/generated/legacy/`.
 
-```text
-chunks/
-  boethius_consolation_chunks.json
+## Five-minute offline quick start
 
-docs/
-  chunking_inspection_notes.md
-  grounding_failure_notes.md
-  retrieval_baseline_comparison.md
-  source_corpus_selection.md
-
-evals/
-  manual_rag_questions.md
-  manual_rag_chunk_map.md
-
-outputs/
-  keyword_retrieval_eval.md
-  bm25_retrieval_eval.md
-  vector_retrieval_eval.md
-  hybrid_retrieval_eval.md
-  manual_rag_prompt_test.md
-  manual_rag_prompt_test_v2.md
-
-scripts/
-  clean_gutenberg_text.py
-  chunk_source.py
-  search_chunks.py
-  evaluate_keyword_retrieval.py
-  evaluate_bm25_retrieval.py
-  evaluate_vector_retrieval.py
-  evaluate_hybrid_retrieval.py
-  run_manual_rag_test.py
-
-sources_public/
-  raw/
-  processed/
-```
-
-## Evaluation Method
-
-A manual evaluation set was created before testing retrieval.
-
-The evaluation set includes:
-
-- 10 RAG questions
-- manually selected expected evidence chunks
-- question types including factual, interpretive, conceptual, synthesis, and insufficient-evidence questions
-
-The key retrieval metric is `Recall@5`:
-
-```text
-Recall@5 = expected chunks found in top 5 retrieved chunks / total expected chunks
-```
-
-Precision@5 is also tracked where available:
-
-```text
-Precision@5 = expected chunks found in top 5 retrieved chunks / 5
-```
-
-Recall measures whether the retriever found the needed evidence.
-
-Precision measures how much noise appeared in the retrieved set.
-
-## Retrieval Baseline Results
-
-| Retrieval Method | Description | Average Recall@5 | Average Precision@5 |
-|---|---|---:|---:|
-| Keyword count | Simple query-term frequency baseline | 0.34 | Not measured |
-| BM25 | Standard lexical retrieval baseline | 0.47 | 0.30 |
-| Vector | Embedding / semantic retrieval using `embeddinggemma` | 0.49 | 0.34 |
-| Hybrid | 50/50 BM25 + vector retrieval | 0.55 | 0.36 |
-
-## Main Retrieval Finding
-
-Hybrid retrieval performed best overall.
-
-The results show that no single retrieval method was perfect:
-
-- keyword count was too brittle
-- BM25 improved exact-term matching
-- vector retrieval helped with semantic similarity but was uneven
-- hybrid retrieval produced the strongest overall result
-
-The current MVP retrieval strategy is therefore:
-
-```text
-Hybrid retrieval = 50% BM25 + 50% vector similarity
-```
-
-Weights were not tuned because the evaluation set is small. Tuning on 10 questions would risk overfitting.
-
-## Grounded Generation Findings
-
-The project also tested local model answers with and without supplied source chunks.
-
-Local model used:
-
-```text
-llama3.2:1b
-```
-
-The key finding:
-
-> Relevant chunks plus a source-use instruction do not guarantee a good grounded answer.
-
-Even when the model was given relevant chunks, it sometimes:
-
-- failed to cite chunk IDs
-- missed the central source relationship
-- introduced unsupported context
-- failed insufficient-evidence questions
-- struggled with literary/allegorical material
-
-This means retrieval and generation must be evaluated separately.
-
-## Known Limitations
-
-This is an MVP, not a production RAG system.
-
-Known limitations:
-
-- only one evaluated source corpus
-- small 10-question evaluation set
-- manual evidence map is first-pass, not definitive
-- local 1B model is weak for reliable grounded interpretation
-- broad synthesis questions may need more than top-5 retrieval
-- insufficient-evidence questions require stronger answer discipline
-- no production vector database
-- no UI
-- no automated grading of generated answers yet
-
-## What This Project Demonstrates
-
-This project demonstrates practical understanding of:
-
-- local inference with Ollama
-- public-source corpus preparation
-- source cleaning
-- chunking strategy
-- stable chunk IDs
-- manual RAG evaluation design
-- evidence mapping
-- keyword retrieval baseline
-- BM25 lexical retrieval
-- vector / embedding retrieval
-- hybrid retrieval
-- Recall@5 and Precision@5
-- grounding failure analysis
-- separation of retrieval quality from answer-generation quality
-
-## How to Reproduce
-
-From the repo root:
+Python 3.11 or newer is required.
 
 ```bash
-python3 scripts/chunk_source.py
-python3 scripts/evaluate_keyword_retrieval.py
-python3 scripts/evaluate_bm25_retrieval.py
-python3 scripts/evaluate_vector_retrieval.py
-python3 scripts/evaluate_hybrid_retrieval.py
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+scriptorium ingest
+scriptorium retrieve "How is providence distinguished from fate?" --method bm25
+scriptorium evaluate --split test --deterministic
+scriptorium report
 ```
 
-To run the local grounded prompt comparison:
+Generated artifacts appear in `outputs/generated/` and are intentionally ignored. Override that location with the top-level `--output` option for CI or fixtures.
+
+## CLI
+
+```text
+scriptorium ingest                         validate provenance and materialize corpus
+scriptorium retrieve QUERY --method bm25  inspect ranked evidence as JSON
+scriptorium evaluate                      tune only on the development split
+scriptorium evaluate --split test         explicitly run the held-out split
+scriptorium report                        derive reports from raw artifacts
+```
+
+Commands return non-zero status for invalid data or arguments and emit machine-readable retrieval output. `evaluate` defaults to `dev` to reduce accidental test-set tuning.
+
+## Evaluation methodology
+
+The dataset contains 50 evidence-backed questions: 30 development and 20 held-out test. Each question maps to one or more chunk IDs with graded relevance (1–3). The harness reports Recall@5, Precision@5, Hit Rate@5, MRR, and nDCG@5. Seeded, 2,000-sample non-parametric bootstrap confidence intervals estimate variation over questions.
+
+The failure taxonomy distinguishes complete misses, partial evidence, low rank, distractor-heavy results, and successful retrieval. Grounded-answer fixtures check citation membership, curated unsupported-claim labels, answerability, and refusal behavior. Those checks are explicitly heuristic and not objective ground truth.
+
+### Retrieval methods
+
+- `keyword`: query-term frequency baseline.
+- `bm25`: in-memory BM25 lexical ranking.
+- `vector`: offline TF-IDF vectors with cosine similarity; this is not a dense semantic model.
+- `hybrid`: reciprocal-rank fusion of BM25 and the offline vector baseline.
+
+The deterministic baseline uses only Python's standard library. Historical Ollama dense-vector and local-generation experiments are preserved in `scripts/` and `docs/analysis/`.
+
+## Optional local model and dense-vector setup
+
+Optional historical experiments require a running [Ollama](https://ollama.com/) installation and locally pulled models such as `embeddinggemma` and `llama3.2:1b`. They are not installed, downloaded, or contacted by CI. The `vector` extra is reserved for future numeric acceleration:
 
 ```bash
-python3 scripts/run_manual_rag_test.py
+python -m pip install -e '.[vector]'
 ```
 
-Vector and hybrid retrieval require Ollama and an embedding model:
+Dense Ollama results must be labelled separately from the offline TF-IDF baseline and include model/version metadata.
+
+## Data contracts and provenance
+
+All active JSON artifacts declare schema version `1.0`. The source manifest requires source, license, SHA-256 checksum, ingestion date, permitted use, and portable processed path. Ingestion rejects missing, malformed, absent, or checksum-mismatched sources. See [DATA_CORPUS_NOTICE.md](DATA_CORPUS_NOTICE.md).
+
+Committed inputs include the processed public-domain source, chunk corpus, question judgments, and deterministic answer fixtures. Machine runs, embedding caches, local models, raw downloads, private sources, and credentials are ignored. Curated interpretation belongs in `docs/analysis/`; generated evidence belongs in `outputs/generated/`.
+
+## Reproducing validation
 
 ```bash
-ollama pull embeddinggemma
+python -m pip install -e '.[dev]'
+ruff check .
+python -m unittest discover -s tests -v
+scriptorium ingest
+scriptorium evaluate --split test --deterministic
+scriptorium report
+python scripts/privacy_check.py
 ```
 
-## Key Artifacts
+## Limitations
 
-Retrieval comparison:
+- One work, one translation, and one chunking configuration limit external validity.
+- Relevance labels are manually curated but not independently adjudicated by a Boethius scholar.
+- Held-out protection is procedural rather than access-controlled.
+- TF-IDF cosine similarity is not a dense semantic embedding evaluation.
+- Answer fixtures test known labels; they do not measure open-ended generation quality.
+- Confidence intervals cover question sampling only, not label, corpus, or model uncertainty.
 
-```text
-docs/retrieval_baseline_comparison.md
-```
+See [docs/analysis/v0.2_methodology.md](docs/analysis/v0.2_methodology.md) and the generated report for the exact run record.
 
-Grounding failure analysis:
+## Project documents
 
-```text
-docs/grounding_failure_notes.md
-```
-
-Manual question set:
-
-```text
-evals/manual_rag_questions.md
-```
-
-Manual evidence map:
-
-```text
-evals/manual_rag_chunk_map.md
-```
-
-Best retrieval output:
-
-```text
-outputs/hybrid_retrieval_eval.md
-```
-
-## MVP Status
-
-Current status:
-
-```text
-MVP retrieval evaluation complete.
-Hybrid retrieval selected as the strongest baseline.
-Grounded generation limitations documented.
-```
-
-Next packaging step:
-
-```text
-Create project case study.
-```
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [SECURITY.md](SECURITY.md)
+- [CHANGELOG.md](CHANGELOG.md)
+- [DATA_CORPUS_NOTICE.md](DATA_CORPUS_NOTICE.md)
+- [docs/demo/offline_demo.md](docs/demo/offline_demo.md)
