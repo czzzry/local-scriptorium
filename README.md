@@ -219,6 +219,8 @@ This project demonstrates practical understanding of:
 
 ## How to Reproduce
 
+The keyword and BM25 baselines use only the Python standard library. Python 3.10 or newer is sufficient.
+
 From the repo root:
 
 ```bash
@@ -240,6 +242,10 @@ Vector and hybrid retrieval require Ollama and an embedding model:
 ```bash
 ollama pull embeddinggemma
 ```
+
+## Licensing And Corpus Provenance
+
+Project code and original documentation are MIT licensed. The bundled source text keeps its own provenance and terms; see [CORPUS_NOTICE.md](CORPUS_NOTICE.md) and `sources_public/source_manifest.json`.
 
 ## Key Artifacts
 

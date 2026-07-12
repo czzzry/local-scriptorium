@@ -1,0 +1,23 @@
+name: Reproducibility checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  baselines:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m compileall -q scripts
+      - run: python scripts/evaluate_keyword_retrieval.py
+      - run: python scripts/evaluate_bm25_retrieval.py
+      - name: Confirm benchmark summary
+        run: |
+          grep -q 'Average Recall@5: 0.34' outputs/keyword_retrieval_eval.md
+          grep -q 'Average Recall@5: 0.47' outputs/bm25_retrieval_eval.md
