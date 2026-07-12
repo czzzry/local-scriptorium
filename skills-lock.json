@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "evaluate-rag": {
+      "source": "hamelsmu/evals-skills",
+      "sourceType": "github",
+      "skillPath": "skills/evaluate-rag/SKILL.md",
+      "computedHash": "2ffd989e885c2eceeede12e4f3470926010bd07c87e36e7dd0c6af52c4597504"
+    },
+    "rag-architect": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/rag-architect/SKILL.md",
+      "computedHash": "650ce80b998ce2c3004c5276a1eabaa2ad4131d4256832eed9a5e06cdc98454d"
+    }
+  }
+}
