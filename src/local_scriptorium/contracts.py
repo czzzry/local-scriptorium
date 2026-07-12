@@ -63,7 +63,10 @@ def validate_manifest(data: dict[str, Any], root: Path, *, verify_checksum: bool
         checksum = source["checksum_sha256"]
         if len(checksum) != 64 or any(char not in "0123456789abcdef" for char in checksum):
             raise ContractError(f"sources[{index}].checksum_sha256 is malformed")
-        path = root / source["processed_path"]
+        relative_path = Path(source["processed_path"])
+        if relative_path.is_absolute() or ".." in relative_path.parts:
+            raise ContractError(f"sources[{index}].processed_path must be a portable relative path")
+        path = root / relative_path
         if verify_checksum and (not path.is_file() or sha256_file(path) != checksum):
             raise ContractError(f"source checksum mismatch or file missing: {path}")
 
@@ -78,7 +81,13 @@ def validate_corpus(data: dict[str, Any]) -> None:
         required = {"chunk_id", "source_id", "text", "start_line", "end_line", "word_count"}
         if not isinstance(chunk, dict) or not required <= chunk.keys():
             raise ContractError("every chunk must contain the documented corpus fields")
-        if chunk["chunk_id"] in seen or not chunk["text"].strip():
+        if not all(isinstance(chunk[field], str) and chunk[field].strip() for field in ("chunk_id", "source_id", "text")):
+            raise ContractError("chunk identifiers and text must be non-empty strings")
+        if not all(isinstance(chunk[field], int) and chunk[field] > 0 for field in ("start_line", "end_line", "word_count")):
+            raise ContractError("chunk locations and word_count must be positive integers")
+        if chunk["start_line"] > chunk["end_line"]:
+            raise ContractError("chunk start_line cannot follow end_line")
+        if chunk["chunk_id"] in seen:
             raise ContractError("chunk IDs must be unique and text must be non-empty")
         seen.add(chunk["chunk_id"])
 
@@ -106,3 +115,30 @@ def validate_questions(data: dict[str, Any], chunk_ids: set[str] | None = None) 
         splits.add(item["split"])
     if splits != {"dev", "test"}:
         raise ContractError("dataset must contain both dev and held-out test splits")
+
+
+def validate_answer_fixtures(data: dict[str, Any], chunk_ids: set[str] | None = None) -> None:
+    """Validate deterministic answer-evaluation fixtures before scoring them."""
+    require_version(data, "answer fixtures")
+    answers = data.get("answers")
+    if not isinstance(answers, list) or not answers:
+        raise ContractError("answer fixtures must contain a non-empty answers list")
+    seen: set[str] = set()
+    for item in answers:
+        required = {
+            "answer_id", "question_id", "answerable", "retrieved_chunk_ids",
+            "response_type", "answer", "citations", "unsupported_claims",
+        }
+        if not isinstance(item, dict) or not required <= item.keys():
+            raise ContractError("answer fixture missing required fields")
+        if item["answer_id"] in seen or item["response_type"] not in {"answer", "refusal"}:
+            raise ContractError("answer IDs must be unique and response_type must be answer or refusal")
+        if not isinstance(item["answerable"], bool) or not isinstance(item["answer"], str) or not item["answer"].strip():
+            raise ContractError("answerability must be boolean and answer text non-empty")
+        list_fields = ("retrieved_chunk_ids", "citations", "unsupported_claims")
+        if any(not isinstance(item[field], list) or not all(isinstance(value, str) for value in item[field]) for field in list_fields):
+            raise ContractError("retrieved chunks, citations, and unsupported claims must be string lists")
+        referenced = set(item["retrieved_chunk_ids"]) | set(item["citations"])
+        if chunk_ids is not None and not referenced <= chunk_ids:
+            raise ContractError(f"unknown chunk in answer fixture {item['answer_id']}")
+        seen.add(item["answer_id"])

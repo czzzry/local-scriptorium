@@ -55,7 +55,7 @@ scriptorium evaluate --split test --deterministic
 scriptorium report
 ```
 
-Generated artifacts appear in `outputs/generated/` and are intentionally ignored. Override that location with the top-level `--output` option for CI or fixtures.
+Generated artifacts appear in `outputs/generated/` and are intentionally ignored. Raw results include detailed JSON plus aggregate and per-ranking CSV files. Override that location with the top-level `--output` option for CI or fixtures.
 
 ## CLI
 
@@ -121,7 +121,7 @@ python scripts/privacy_check.py
 - Answer fixtures test known labels; they do not measure open-ended generation quality.
 - Confidence intervals cover question sampling only, not label, corpus, or model uncertainty.
 
-See [docs/analysis/v0.2_methodology.md](docs/analysis/v0.2_methodology.md) and the generated report for the exact run record.
+See [docs/data_contracts.md](docs/data_contracts.md), [docs/analysis/v0.2_methodology.md](docs/analysis/v0.2_methodology.md), and the generated report for the exact run record.
 
 ## Project documents
 

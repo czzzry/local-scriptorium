@@ -22,8 +22,16 @@ class CliTests(unittest.TestCase):
             self.assertTrue((generated / "report.md").is_file())
             self.assertTrue((generated / "report.html").is_file())
             self.assertTrue((generated / "retrieval_summary.csv").is_file())
+            self.assertTrue((generated / "retrieval_details.csv").is_file())
             metadata = json.loads((generated / "run_metadata.json").read_text())
-            self.assertEqual(metadata["timestamp"], "normalized-for-reproducibility")
+            self.assertTrue(metadata["timestamp"].endswith("+00:00"))
+            self.assertEqual(metadata["configuration"]["split"], "test")
+            self.assertEqual(metadata["configuration"]["top_k"], 5)
+            self.assertEqual(metadata["runtime"]["dependencies"]["runtime"], "python-standard-library")
+            rendered = (generated / "report.html").read_text(encoding="utf-8")
+            self.assertIn("<h1>Local Scriptorium Evaluation Report</h1>", rendered)
+            self.assertIn("<table>", rendered)
+            self.assertIn("<pre><code>python -m pip install", rendered)
 
     def test_retrieve_emits_json(self):
         process = subprocess.run(

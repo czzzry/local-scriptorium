@@ -7,6 +7,7 @@
 - Added a manually curated 50-question development/held-out dataset.
 - Standardized keyword, BM25, offline TF-IDF vector, and reciprocal-rank hybrid evaluation.
 - Added ranked metrics, bootstrap confidence intervals, failure taxonomy, answer fixtures, and derived reports.
+- Added detailed ranked-result CSV, complete run metadata, versioned regression thresholds, and styled HTML reporting.
 - Isolated generated output and added tests, CI, privacy checks, and release documentation.
 
 ## 0.1.0 — Manual MVP

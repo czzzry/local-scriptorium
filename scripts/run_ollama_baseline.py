@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROMPTS_PATH = ROOT / "evals" / "local_model_baseline_prompts.json"
-RUNS_DIR = ROOT / "outputs" / "runs"
+RUNS_DIR = ROOT / "outputs" / "generated" / "legacy" / "runs"
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
 

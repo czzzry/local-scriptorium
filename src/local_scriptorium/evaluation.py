@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import importlib.metadata
 import platform
 import subprocess
 from datetime import UTC, datetime
@@ -22,15 +23,37 @@ def revision(root: Path) -> str:
         return "unknown"
 
 
-def run_metadata(root: Path, corpus_path: Path, seed: int, deterministic: bool) -> dict[str, Any]:
+def run_metadata(
+    root: Path,
+    corpus_path: Path,
+    *,
+    seed: int,
+    split: str,
+    top_k: int,
+    deterministic: bool,
+) -> dict[str, Any]:
+    try:
+        installed_version = importlib.metadata.version("local-scriptorium")
+    except importlib.metadata.PackageNotFoundError:
+        installed_version = __version__
     return {
         "schema_version": SCHEMA_VERSION,
         "harness_version": __version__,
-        "configuration": {"top_k": 5, "methods": ["keyword", "bm25", "vector", "hybrid"]},
+        "configuration": {
+            "top_k": top_k,
+            "split": split,
+            "methods": ["keyword", "bm25", "vector", "hybrid"],
+            "deterministic": deterministic,
+        },
         "seed": seed,
         "revision": revision(root),
-        "timestamp": "normalized-for-reproducibility" if deterministic else datetime.now(UTC).isoformat(),
-        "runtime": {"python": platform.python_version(), "platform": "normalized" if deterministic else platform.platform()},
+        "timestamp": datetime.now(UTC).isoformat(),
+        "runtime": {
+            "python": platform.python_version(),
+            "implementation": platform.python_implementation(),
+            "platform": platform.platform(),
+            "dependencies": {"local-scriptorium": installed_version, "runtime": "python-standard-library"},
+        },
         "corpus_checksum_sha256": sha256_file(corpus_path),
     }
 
@@ -59,7 +82,12 @@ def evaluate_retrieval(corpus: dict, questions: dict, split: str, k: int = 5, se
             rows.append(
                 {
                     "question_id": question["question_id"],
-                    "retrieved": [item.chunk_id for item in ranked],
+                    "question": question["question"],
+                    "relevance": question["relevance"],
+                    "retrieved": [
+                        {"chunk_id": item.chunk_id, "score": item.score, "rank": item.rank}
+                        for item in ranked
+                    ],
                     "metrics": metrics,
                     "failure": classify_failure(metrics, k),
                 }
@@ -70,7 +98,14 @@ def evaluate_retrieval(corpus: dict, questions: dict, split: str, k: int = 5, se
             for name in summary
         }
         methods[method] = {"summary": summary, "confidence_intervals_95": uncertainty, "questions": rows}
-    return {"schema_version": SCHEMA_VERSION, "split": split, "top_k": k, "methods": methods}
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "dataset_id": questions["dataset_id"],
+        "corpus_id": questions["corpus_id"],
+        "split": split,
+        "top_k": k,
+        "methods": methods,
+    }
 
 
 def evaluate_answers(fixtures: dict) -> dict:

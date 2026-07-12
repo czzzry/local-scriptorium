@@ -25,13 +25,7 @@ Method used:
 
 ## Compatibility Check
 
-macOS version:
-ProductVersion:		26.3.1
-ProductVersionExtra:	(a)
-BuildVersion:		25D771280a
-
-Hardware summary:
-see (hardware_baseline.md)
+The historical smoke test succeeded on a local macOS laptop. Exact machine and OS-build fingerprints have been removed from committed documentation; see `hardware_baseline.md` for the reproducibility policy.
 
 ## Commands Run
 

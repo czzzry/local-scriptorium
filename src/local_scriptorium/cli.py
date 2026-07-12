@@ -12,6 +12,7 @@ from .contracts import (
     ContractError,
     read_json,
     validate_corpus,
+    validate_answer_fixtures,
     validate_manifest,
     validate_questions,
 )
@@ -64,9 +65,17 @@ def command_evaluate(args: argparse.Namespace) -> int:
     validate_corpus(corpus)
     validate_questions(questions, {chunk["chunk_id"] for chunk in corpus["chunks"]})
     fixtures = read_json(root / "data" / "answers" / "fixtures.v1.json")
+    validate_answer_fixtures(fixtures, {chunk["chunk_id"] for chunk in corpus["chunks"]})
     results = evaluate_retrieval(corpus, questions, args.split, args.top_k, args.seed)
     answer_results = evaluate_answers(fixtures)
-    metadata = run_metadata(root, corpus_path, args.seed, args.deterministic)
+    metadata = run_metadata(
+        root,
+        corpus_path,
+        seed=args.seed,
+        split=args.split,
+        top_k=args.top_k,
+        deterministic=args.deterministic,
+    )
     write_json(output / "retrieval_results.json", results)
     write_json(output / "answer_results.json", answer_results)
     write_json(output / "run_metadata.json", metadata)

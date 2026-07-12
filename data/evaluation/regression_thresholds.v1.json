@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "baseline_id": "v0.2-offline-heldout-test",
+  "metric": "hit_rate@5",
+  "rationale": "Floors are 0.15 below the measured v0.2 held-out values. This catches major ranking or data regressions while tolerating legitimate implementation changes on the 20-question test set.",
+  "measured": {
+    "keyword": 0.9,
+    "bm25": 0.9,
+    "vector": 0.95,
+    "hybrid": 0.9
+  },
+  "minimum": {
+    "keyword": 0.75,
+    "bm25": 0.75,
+    "vector": 0.8,
+    "hybrid": 0.75
+  }
+}

@@ -1,38 +1,9 @@
-# Hardware Baseline
+# Hardware Context for Historical Local Inference
 
-This file records the machine used for the Local Scriptorium MVP.
+The v0.1 Ollama experiments ran on a consumer laptop rather than dedicated inference hardware. Exact model identifiers, OS build numbers, storage figures, and other machine fingerprints are intentionally not committed.
 
-The purpose is to make local inference results interpretable. If a local model is slow, unstable, or limited, those results should be understood in relation to the hardware used.
+## Why hardware context matters
 
-## Date Captured
+Local inference performance depends on CPU/GPU capability, memory, storage, thermals, model size, quantization, and runner version. A reproducible performance study should capture those values in private run metadata or an ignored generated artifact, then publish only the minimum aggregate hardware class needed to interpret results.
 
-2026-05-17
-
-## Machine
-
-Mac model: MacBook Pro
-Model identifier: MacBookPro16,2
-Processor / chip: Quad-Core Intel Core i7
-Memory / RAM: 16 GB
-macOS version: macOS Tahoe 26.3.1 (a)
-Build version: 25D771280a
-Available storage: 100 GB
-
-## Why This Matters
-
-Local inference runs the model on this machine rather than on a cloud server. That means performance depends on local hardware constraints such as:
-
-- CPU / GPU capability
-- available memory
-- available storage
-- operating system compatibility
-- thermal limits
-- model size
-
-This baseline will help interpret later results from Ollama or other local model runners.
-
-## Initial Local Inference Expectation
-
-This machine will be used for the MVP local inference smoke test.
-
-The MVP does not require excellent model quality or production-level performance. The immediate goal is to prove that a local model can run, generate responses, and support the source → chunk → retrieve → answer → evaluate learning loop.
+The v0.2 deterministic retrieval benchmark does not use Ollama and makes no performance claim based on the historical machine. Runtime metadata for each new evaluation run is generated locally under `outputs/generated/` and is ignored by Git.

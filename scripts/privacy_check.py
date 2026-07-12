@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PATTERNS = {
     "secret-like value": re.compile(r"(?i)(api[_-]?key|secret|password)\s*[:=]\s*['\"][^'\"]+"),
     "absolute user path": re.compile(r"/(Users|home)/[^/\s]+/"),
+    "machine model identifier": re.compile(r"\b(?:MacBookPro|MacBookAir|Macmini|iMac)\d{1,2},\d\b"),
+    "operating-system build record": re.compile(r"(?i)BuildVersion\s*[:=]\s*[A-Za-z0-9]+"),
     "private key": re.compile(r"BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY"),
 }
 ALLOW_SUFFIXES = {".py", ".md", ".json", ".toml", ".yml", ".yaml", ".txt", ".csv"}
