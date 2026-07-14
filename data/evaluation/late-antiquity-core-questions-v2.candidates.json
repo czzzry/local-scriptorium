@@ -1,0 +1,2507 @@
+{
+  "schema_version": "2.0",
+  "dataset_id": "late-antiquity-available-questions-v2-candidates",
+  "status": "candidate_generation_pending_review",
+  "questions": [
+    {
+      "question_id": "CAND-001",
+      "family_id": "single-000",
+      "question": "What claim or distinction is made in the passage beginning ‘# The Consolation of Philosophy…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-002",
+      "family_id": "single-001",
+      "question": "What claim or distinction is made in the passage beginning ‘Author: Boethius Translator: H. R. James Source ID: BOETHIUS_CONSOLATION_001…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0002:l4-6"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0002:l4-6"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-003",
+      "family_id": "single-002",
+      "question": "What claim or distinction is made in the passage beginning ‘---…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0003:l8-8"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0003:l8-8"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-004",
+      "family_id": "single-003",
+      "question": "What claim or distinction is made in the passage beginning ‘[Greek: homôs de kai en toutois dialampei to kalon, epeidan pherê tis eukolôs pollas kai m…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0004:l10-14"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0004:l10-14"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-005",
+      "family_id": "single-004",
+      "question": "What claim or distinction is made in the passage beginning ‘Aristotle's 'Ethics,' I., xi. 12.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0005:l16-16"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0005:l16-16"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-006",
+      "family_id": "single-005",
+      "question": "What claim or distinction is made in the passage beginning ‘[Illustration: Diptych representing Narius Manlius Boethius, father of Anicius Manlius Sev…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0006:l18-20"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0006:l18-20"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-007",
+      "family_id": "single-006",
+      "question": "What claim or distinction is made in the passage beginning ‘NARIVS MANLIVS BOETHIVS VIR CLARISSIMVS ET INLVSTRIS EXPRAEFECTVS PRAETORIO PRAEFECTVS VRB…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0007:l22-24"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0007:l22-24"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-008",
+      "family_id": "single-007",
+      "question": "What claim or distinction is made in the passage beginning ‘(_For description vid. Preface, p. vi_)]…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0008:l26-26"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0008:l26-26"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-009",
+      "family_id": "single-008",
+      "question": "What claim or distinction is made in the passage beginning ‘THE CONSOLATION OF PHILOSOPHY OF BOETHIUS.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0009:l28-28"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0009:l28-28"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-010",
+      "family_id": "single-009",
+      "question": "What claim or distinction is made in the passage beginning ‘Translated into English Prose and Verse…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0010:l30-30"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0010:l30-30"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-011",
+      "family_id": "single-010",
+      "question": "What claim or distinction is made in the passage beginning ‘by…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0011:l32-32"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0011:l32-32"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-012",
+      "family_id": "single-011",
+      "question": "What claim or distinction is made in the passage beginning ‘H.R. JAMES, M.A., CH. CH. OXFORD.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0012:l34-34"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0012:l34-34"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-013",
+      "family_id": "single-012",
+      "question": "What claim or distinction is made in the passage beginning ‘Quantumlibet igitur sæviant mali, sapienti tamen corona non decidet, non arescet.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0013:l36-37"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0013:l36-37"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-014",
+      "family_id": "single-013",
+      "question": "What claim or distinction is made in the passage beginning ‘Melioribus animum conformaveris, nihil opus est judice præmium deferente, tu te ipse excel…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0014:l39-42"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0014:l39-42"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-015",
+      "family_id": "single-014",
+      "question": "What claim or distinction is made in the passage beginning ‘LONDON: ELLIOT STOCK, 62, PATERNOSTER ROW.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0015:l44-45"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0015:l44-45"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-016",
+      "family_id": "single-015",
+      "question": "What claim or distinction is made in the passage beginning ‘1897.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0016:l47-47"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0016:l47-47"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-017",
+      "family_id": "single-016",
+      "question": "What claim or distinction is made in the passage beginning ‘PREFACE.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0017:l49-49"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0017:l49-49"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-018",
+      "family_id": "single-017",
+      "question": "What claim or distinction is made in the passage beginning ‘The book called 'The Consolation of Philosophy' was throughout the Middle Ages, and down t…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0018:l51-65"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0018:l51-65"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-019",
+      "family_id": "single-018",
+      "question": "What claim or distinction is made in the passage beginning ‘Some of the editions contain a reproduction of a bust purporting to represent Boethius. Lo…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0019:l67-86"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0019:l67-86"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-020",
+      "family_id": "single-019",
+      "question": "What claim or distinction is made in the passage beginning ‘I have to thank my brother, Mr. L. James, of Radley College, for much valuable help and fo…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0020:l88-90"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0020:l88-90"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-021",
+      "family_id": "single-020",
+      "question": "What claim or distinction is made in the passage beginning ‘PROEM.…’?",
+      "split": "dev",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0021:l92-92"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0021:l92-92"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-022",
+      "family_id": "single-021",
+      "question": "What claim or distinction is made in the passage beginning ‘Anicus Manlius Severinus Boethius lived in the last quarter of the fifth century A.D., and…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0022:l94-134"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0022:l94-134"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-023",
+      "family_id": "single-022",
+      "question": "What claim or distinction is made in the passage beginning ‘INDEX…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0023:l136-136"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0023:l136-136"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-024",
+      "family_id": "single-023",
+      "question": "What claim or distinction is made in the passage beginning ‘OF…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0024:l138-138"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0024:l138-138"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-025",
+      "family_id": "single-024",
+      "question": "What claim or distinction is made in the passage beginning ‘VERSE INTERLUDES.…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0025:l140-140"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0025:l140-140"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-026",
+      "family_id": "single-025",
+      "question": "What claim or distinction is made in the passage beginning ‘BOOK I. THE SORROWS OF BOETHIUS.…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0026:l142-143"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0026:l142-143"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-027",
+      "family_id": "single-026",
+      "question": "What claim or distinction is made in the passage beginning ‘SONG PAGE I. BOETHIUS' COMPLAINT 3 II. HIS DESPONDENCY 9 III. THE MISTS DISPELLED 12 IV. N…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0027:l145-152"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0027:l145-152"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-028",
+      "family_id": "single-027",
+      "question": "What claim or distinction is made in the passage beginning ‘BOOK II. THE VANITY OF FORTUNE'S GIFTS.…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0028:l154-155"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0028:l154-155"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-029",
+      "family_id": "single-028",
+      "question": "What claim or distinction is made in the passage beginning ‘I. FORTUNE'S MALICE 47 II. MAN'S COVETOUSNESS 51 III. ALL PASSES 55 IV. THE GOLDEN MEAN 62…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0029:l157-164"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0029:l157-164"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-030",
+      "family_id": "single-029",
+      "question": "What claim or distinction is made in the passage beginning ‘BOOK III. TRUE HAPPINESS AND FALSE.…’?",
+      "split": "test",
+      "question_type": "single_passage_textual",
+      "risk_tags": [],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0030:l166-167"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0030:l166-167"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-031",
+      "family_id": "synthesis-000",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CITY_OF_GOD_001:p0002:l4-4"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0002:l4-4"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-032",
+      "family_id": "synthesis-001",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0002:l4-4",
+        "AUGUSTINE_CONFESSIONS_001:p0003:l6-6"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0002:l4-4"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0003:l6-6"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-033",
+      "family_id": "synthesis-002",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0003:l8-8",
+        "BOETHIUS_CONSOLATION_001:p0004:l10-14"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0003:l8-8"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0004:l10-14"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-034",
+      "family_id": "synthesis-003",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_TRACTATES_001:p0004:l10-10",
+        "BOETHIUS_TRACTATES_001:p0005:l12-12"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_TRACTATES_001:p0004:l10-10"
+            ],
+            [
+              "BOETHIUS_TRACTATES_001:p0005:l12-12"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-035",
+      "family_id": "synthesis-004",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "IAMBLICHUS_MYSTERIES_001:p0005:l16-18",
+        "IAMBLICHUS_MYSTERIES_001:p0006:l20-20"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0005:l16-18"
+            ],
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0006:l20-20"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-036",
+      "family_id": "synthesis-005",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PLOTINUS_ENNEADS_I_V_001:p0006:l14-17",
+        "PLOTINUS_ENNEADS_I_V_001:p0007:l19-20"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0006:l14-17"
+            ],
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0007:l19-20"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-037",
+      "family_id": "synthesis-006",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PROCLUS_ELEMENTS_001:p0007:l17-17",
+        "PROCLUS_ELEMENTS_001:p0008:l19-19"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PROCLUS_ELEMENTS_001:p0007:l17-17"
+            ],
+            [
+              "PROCLUS_ELEMENTS_001:p0008:l19-19"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-038",
+      "family_id": "synthesis-007",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0008:l37-40",
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0009:l42-42"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0008:l37-40"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0009:l42-42"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-039",
+      "family_id": "synthesis-008",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0009:l37-37",
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0010:l39-39"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0009:l37-37"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0010:l39-39"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-040",
+      "family_id": "synthesis-009",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0010:l21-21",
+        "AUGUSTINE_CITY_OF_GOD_001:p0011:l24-25"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0010:l21-21"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0011:l24-25"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-041",
+      "family_id": "synthesis-010",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0011:l91-101",
+        "AUGUSTINE_CONFESSIONS_001:p0012:l103-113"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0011:l91-101"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0012:l103-113"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-042",
+      "family_id": "synthesis-011",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0012:l34-34",
+        "BOETHIUS_CONSOLATION_001:p0013:l36-37"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0012:l34-34"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0013:l36-37"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-043",
+      "family_id": "synthesis-012",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_TRACTATES_001:p0013:l39-39",
+        "BOETHIUS_TRACTATES_001:p0014:l41-41"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_TRACTATES_001:p0013:l39-39"
+            ],
+            [
+              "BOETHIUS_TRACTATES_001:p0014:l41-41"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-044",
+      "family_id": "synthesis-013",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "dev",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "IAMBLICHUS_MYSTERIES_001:p0014:l98-107",
+        "IAMBLICHUS_MYSTERIES_001:p0015:l109-131"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0014:l98-107"
+            ],
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0015:l109-131"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-045",
+      "family_id": "synthesis-014",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "test",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PLOTINUS_ENNEADS_I_V_001:p0015:l44-44",
+        "PLOTINUS_ENNEADS_I_V_001:p0016:l47-47"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0015:l44-44"
+            ],
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0016:l47-47"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-046",
+      "family_id": "synthesis-015",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "test",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PROCLUS_ELEMENTS_001:p0016:l35-35",
+        "PROCLUS_ELEMENTS_001:p0017:l37-37"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PROCLUS_ELEMENTS_001:p0016:l35-35"
+            ],
+            [
+              "PROCLUS_ELEMENTS_001:p0017:l37-37"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-047",
+      "family_id": "synthesis-016",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "test",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0017:l100-100",
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0018:l102-128"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0017:l100-100"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0018:l102-128"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-048",
+      "family_id": "synthesis-017",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "test",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0018:l71-91",
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0019:l94-94"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0018:l71-91"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0019:l94-94"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-049",
+      "family_id": "synthesis-018",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "test",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0019:l49-49",
+        "AUGUSTINE_CITY_OF_GOD_001:p0020:l51-51"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0019:l49-49"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0020:l51-51"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-050",
+      "family_id": "synthesis-019",
+      "question": "How do these two passages from the same work develop or qualify one another?",
+      "split": "test",
+      "question_type": "within_work_synthesis",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0020:l262-278",
+        "AUGUSTINE_CONFESSIONS_001:p0021:l280-300"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0020:l262-278"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0021:l280-300"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-051",
+      "family_id": "scope-000",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-052",
+      "family_id": "scope-001",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-053",
+      "family_id": "scope-002",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-054",
+      "family_id": "scope-003",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_TRACTATES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-055",
+      "family_id": "scope-004",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-056",
+      "family_id": "scope-005",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-057",
+      "family_id": "scope-006",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "dev",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PROCLUS_ELEMENTS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-058",
+      "family_id": "scope-007",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "test",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-059",
+      "family_id": "scope-008",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "test",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-060",
+      "family_id": "scope-009",
+      "question": "Which author and work does this passage belong to, and what edition metadata is recorded?",
+      "split": "test",
+      "question_type": "attribution_source_scope",
+      "risk_tags": [
+        "source_attribution"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-061",
+      "family_id": "pair-000",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-062",
+      "family_id": "pair-001",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2",
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-063",
+      "family_id": "pair-002",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2",
+        "BOETHIUS_TRACTATES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-064",
+      "family_id": "pair-003",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_TRACTATES_001:p0001:l2-2",
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ],
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-065",
+      "family_id": "pair-004",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6",
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ],
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-066",
+      "family_id": "pair-005",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2",
+        "PROCLUS_ELEMENTS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ],
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-067",
+      "family_id": "pair-006",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PROCLUS_ELEMENTS_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-068",
+      "family_id": "pair-007",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-069",
+      "family_id": "pair-008",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2",
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-070",
+      "family_id": "pair-009",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-071",
+      "family_id": "pair-010",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2",
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-072",
+      "family_id": "pair-011",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2",
+        "BOETHIUS_TRACTATES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-073",
+      "family_id": "pair-012",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_TRACTATES_001:p0001:l2-2",
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ],
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-074",
+      "family_id": "pair-013",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "dev",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6",
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ],
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-075",
+      "family_id": "pair-014",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "test",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2",
+        "PROCLUS_ELEMENTS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ],
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-076",
+      "family_id": "pair-015",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "test",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PROCLUS_ELEMENTS_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-077",
+      "family_id": "pair-016",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "test",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-078",
+      "family_id": "pair-017",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "test",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2",
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-079",
+      "family_id": "pair-018",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "test",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-080",
+      "family_id": "pair-019",
+      "question": "What similarity or difference can be stated cautiously from these two authors’ passages?",
+      "split": "test",
+      "question_type": "cross_author_comparison",
+      "risk_tags": [
+        "interpretation_sensitive",
+        "translation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2",
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-081",
+      "family_id": "trace-000",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2",
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-082",
+      "family_id": "trace-001",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2",
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2",
+        "BOETHIUS_TRACTATES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-083",
+      "family_id": "trace-002",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2",
+        "BOETHIUS_TRACTATES_001:p0001:l2-2",
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ],
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-084",
+      "family_id": "trace-003",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "BOETHIUS_TRACTATES_001:p0001:l2-2",
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6",
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "BOETHIUS_TRACTATES_001:p0001:l2-2"
+            ],
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ],
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-085",
+      "family_id": "trace-004",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "IAMBLICHUS_MYSTERIES_001:p0001:l2-6",
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2",
+        "PROCLUS_ELEMENTS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "IAMBLICHUS_MYSTERIES_001:p0001:l2-6"
+            ],
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ],
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-086",
+      "family_id": "trace-005",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2",
+        "PROCLUS_ELEMENTS_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PLOTINUS_ENNEADS_I_V_001:p0001:l2-2"
+            ],
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-087",
+      "family_id": "trace-006",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "dev",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PROCLUS_ELEMENTS_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PROCLUS_ELEMENTS_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-088",
+      "family_id": "trace-007",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "test",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2",
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2",
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_DIVINE_NAMES_001:p0001:l2-2"
+            ],
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-089",
+      "family_id": "trace-008",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "test",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2",
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-090",
+      "family_id": "trace-009",
+      "question": "How does the selected concept appear across these three source units?",
+      "split": "test",
+      "question_type": "concept_tracing",
+      "risk_tags": [
+        "interpretation_sensitive"
+      ],
+      "answerability": "answerable",
+      "canonical_passage_ids": [
+        "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2",
+        "AUGUSTINE_CONFESSIONS_001:p0001:l2-2",
+        "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+      ],
+      "acceptable_evidence_sets": [
+        {
+          "required_groups": [
+            [
+              "AUGUSTINE_CITY_OF_GOD_001:p0001:l2-2"
+            ],
+            [
+              "AUGUSTINE_CONFESSIONS_001:p0001:l2-2"
+            ],
+            [
+              "BOETHIUS_CONSOLATION_001:p0001:l2-2"
+            ]
+          ]
+        }
+      ],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-091",
+      "family_id": "unanswerable-000",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-092",
+      "family_id": "unanswerable-001",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-093",
+      "family_id": "unanswerable-002",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-094",
+      "family_id": "unanswerable-003",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-095",
+      "family_id": "unanswerable-004",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-096",
+      "family_id": "unanswerable-005",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-097",
+      "family_id": "unanswerable-006",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "dev",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-098",
+      "family_id": "unanswerable-007",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "test",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-099",
+      "family_id": "unanswerable-008",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "test",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    },
+    {
+      "question_id": "CAND-100",
+      "family_id": "unanswerable-009",
+      "question": "Does this acquired corpus establish the exact original-language wording and definitive authorship of this claim?",
+      "split": "test",
+      "question_type": "unanswerable",
+      "risk_tags": [
+        "external_adjudication"
+      ],
+      "answerability": "unanswerable",
+      "canonical_passage_ids": [],
+      "acceptable_evidence_sets": [],
+      "curation_state": "candidate"
+    }
+  ]
+}

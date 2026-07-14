@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "source_id": "PLOTINUS_ENNEADS_I_V_001",
+  "required_scope": "Original Stephen MacKenna volumes I–IV covering Enneads I–V",
+  "candidates": [
+    {"path": "sources_public/raw/plotinus_plotinustranslat01burkuoft.txt", "assessment": "MacKenna original volume I, Ethical Treatises / First Ennead, 1917", "status": "acquired_verified"},
+    {"path": "sources_public/raw/plotinus_plotinustranslat02burkuoft.txt", "assessment": "MacKenna original volume II, Psychic and Physical Treatises / Enneads II–III, 1921", "status": "acquired_verified"},
+    {"path": "sources_public/raw/plotinus_plotinustranslat03burkuoft.txt", "assessment": "MacKenna original volume III, Nature of the Soul / Fourth Ennead, 1917", "status": "acquired_verified"},
+    {"path": "sources_public/raw/plotinus_plotinustranslat04plotuoft.txt", "assessment": "MacKenna original volume IV, Divine Mind / Fifth Ennead, 1917", "status": "acquired_verified"},
+    {"path": "sources_public/raw/plotinus_plotinustheennea033190mbp.txt", "assessment": "B. S. Page revised second edition; explicitly excluded by v0.3 scope", "status": "excluded_later_revision"}
+  ],
+  "missing_scope": [],
+  "decision": "Activate the combined normalized source after checksum and scope validation; retain the later Page revision as excluded evidence."
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "pack_id": "late-antiquity-available-v1",
+  "register_id": "local-scriptorium-public-source-register-v2",
+  "display_name": "Late Antique Platonism — acquired-source pack",
+  "description": "Eight-source executable pack while the registered MacKenna Plotinus selection remains acquisition-pending.",
+  "active_source_ids": [
+    "BOETHIUS_CONSOLATION_001",
+    "IAMBLICHUS_MYSTERIES_001",
+    "AUGUSTINE_CONFESSIONS_001",
+    "BOETHIUS_TRACTATES_001",
+    "PROCLUS_ELEMENTS_001",
+    "PSEUDO_DIONYSIUS_DIVINE_NAMES_001",
+    "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001",
+    "AUGUSTINE_CITY_OF_GOD_001"
+  ],
+  "blocked_source_ids": ["GREGORY_NYSSA_SOUL_RESURRECTION_001"],
+  "inactive_candidate_source_ids": ["PLOTINUS_ENNEADS_I_V_001"],
+  "allowed_content_kinds": ["primary_text", "verse", "proposition"],
+  "excluded_content_kinds": ["distribution_wrapper", "gutenberg_wrapper", "website_wrapper", "scan_wrapper", "translator_note", "editorial_apparatus", "reference_index", "later_revision"],
+  "question_dataset_id": "late-antiquity-available-questions-v0",
+  "chunker_id": "paragraph-window-v1",
+  "review_policy_id": "review-classics-policy-v1",
+  "status": "executable-acquired-sources-pending-plotinus"
+}

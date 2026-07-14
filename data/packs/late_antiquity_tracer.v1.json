@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "pack_id": "late-antiquity-tracer-v1",
+  "register_id": "local-scriptorium-public-source-register-v2",
+  "display_name": "Late Antique Platonism tracer",
+  "description": "Two-author ingestion tracer used before the full nine-source pack.",
+  "active_source_ids": ["BOETHIUS_CONSOLATION_001", "IAMBLICHUS_MYSTERIES_001"],
+  "blocked_source_ids": ["GREGORY_NYSSA_SOUL_RESURRECTION_001"],
+  "inactive_candidate_source_ids": [],
+  "allowed_content_kinds": ["primary_text", "verse", "proposition"],
+  "excluded_content_kinds": ["distribution_wrapper", "gutenberg_wrapper", "website_wrapper", "translator_note", "editorial_apparatus", "reference_index"],
+  "question_dataset_id": "late-antiquity-tracer-questions-v0",
+  "chunker_id": "paragraph-window-v1",
+  "review_policy_id": "review-classics-policy-v1",
+  "status": "tracer-ready"
+}
