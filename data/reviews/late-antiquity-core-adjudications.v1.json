@@ -1,0 +1,607 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "late-antiquity-core-questions-v2",
+  "status": "complete_protocol_adjudication",
+  "items": [
+    {
+      "item_id": "CAND-001",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-002",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-003",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-004",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-005",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-006",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-007",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-008",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-009",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-010",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-011",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-012",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-013",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-014",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-015",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-016",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-017",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-018",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-019",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-020",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-021",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-022",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-023",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-024",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-025",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-026",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-027",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-028",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-029",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-030",
+      "decision": "exclude",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-031",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-032",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-033",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-034",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-035",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-036",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-037",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-038",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-039",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-040",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-041",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-042",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-043",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-044",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-045",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-046",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-047",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-048",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-049",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-050",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-051",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-052",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-053",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-054",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-055",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-056",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-057",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-058",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-059",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-060",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-061",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-062",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-063",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-064",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-065",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-066",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-067",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-068",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-069",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-070",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-071",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-072",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-073",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-074",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-075",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-076",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-077",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-078",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-079",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-080",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-081",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-082",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-083",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-084",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-085",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-086",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-087",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-088",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-089",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-090",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-091",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-092",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-093",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-094",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-095",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-096",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-097",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-098",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-099",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    },
+    {
+      "item_id": "CAND-100",
+      "decision": "accept",
+      "rationale": "Protocol adjudication: exclude front-matter-only prompts; retain bounded answerable or explicit-unanswerable items with their recorded caveats.",
+      "adjudicator": "project-local-review-protocol"
+    }
+  ]
+}

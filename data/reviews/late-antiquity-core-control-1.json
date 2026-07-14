@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "review_id": "late-antiquity-review-1",
+  "items": [
+    {
+      "item_id": "CAND-014",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-002",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-004",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-007",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-006",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-025",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-019",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-017",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-005",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-020",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-012",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-013",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-023",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-001",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-024",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-022",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-015",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-011",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-008",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-016",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-003",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-021",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-018",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-009",
+      "first_pass_action": "accept"
+    },
+    {
+      "item_id": "CAND-010",
+      "first_pass_action": "accept"
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "schema_version": "2.0",
+  "register_id": "local-scriptorium-public-source-register-v2",
+  "project": "Local Scriptorium",
+  "reviewed_at": "2026-07-13",
+  "rights_notice": "This is a practical provenance register, not formal legal advice. Translation rights are assessed separately from ancient authorship. Public-pack inclusion requires the exact edition, normalized checksum, and jurisdictional review to remain aligned.",
+  "jurisdictions": [
+    "United States",
+    "Germany",
+    "European Union"
+  ],
+  "sources": [
+    {
+      "source_id": "BOETHIUS_CONSOLATION_001",
+      "author": "Boethius",
+      "work": "Consolation of Philosophy",
+      "title": "The Consolation of Philosophy",
+      "translator": "H. R. James",
+      "edition_year": 1897,
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/14328"
+      ],
+      "provenance_urls": [
+        "https://openlibrary.org/books/OL7158707M/The_consolation_of_philosophy_of_Boethius"
+      ],
+      "translator_death_year": 1931,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; United States pre-1931 publication basis and Germany/EU translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum and local-law review",
+      "processed_path": "sources_public/processed/boethius_consolation_james_clean.md",
+      "raw_checksum_sha256": "a974687c4ee510ef9d753bee419c0bac9b221a605e6fdbec7b1101fe3a6b8615",
+      "normalized_checksum_sha256": "4d00df8ca7760d8a84524bef68e6d6433533b5380cbf75d2dfbb64e9860320f7",
+      "allowed_content_kinds": [
+        "primary_text",
+        "verse"
+      ],
+      "excluded_content_kinds": [
+        "gutenberg_wrapper",
+        "translator_note",
+        "editorial_apparatus",
+        "reference_index"
+      ],
+      "scope": "Complete translated work after exclusion of distribution wrappers and editorial apparatus.",
+      "notes": "Existing v0.2 source. v0.3 must rebuild canonical passages rather than copy the v0.2 chunk file."
+    },
+    {
+      "source_id": "IAMBLICHUS_MYSTERIES_001",
+      "author": "Iamblichus",
+      "work": "On the Mysteries",
+      "title": "On the Mysteries",
+      "translator": "Thomas Taylor",
+      "edition_year": 1895,
+      "original_edition_year": 1821,
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/72815",
+        "https://wellcomecollection.org/works/qmyur495"
+      ],
+      "provenance_urls": [
+        "https://wellcomecollection.org/works/qmyur495"
+      ],
+      "translator_death_year": 1835,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; translator death date supports United States and Germany/EU public-domain basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum and local-law review",
+      "processed_path": "sources_public/processed/iamblichus_mysteries_taylor_clean.md",
+      "raw_checksum_sha256": "dcf1da732a9ca10ca38dbe8e559853d9ffcac5b01a6419a98f8aa6fa11aa48be",
+      "normalized_checksum_sha256": "2ae11411a82b8635191e0cdd67838def55dfa43a64e5d8f0197f59c476e8ae7c",
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus"
+      ],
+      "scope": "Complete translated work, excluding scan or website wrappers and unapproved editorial material.",
+      "notes": "Project Gutenberg #72815 is the 1895 second-edition reprint, explicitly described as an unaltered facsimile of the 1821 first edition; the register records both dates."
+    },
+    {
+      "source_id": "AUGUSTINE_CONFESSIONS_001",
+      "author": "Augustine of Hippo",
+      "work": "Confessions",
+      "title": "The Confessions of Saint Augustine",
+      "translator": "E. B. Pusey",
+      "edition_year": 1838,
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/3296"
+      ],
+      "provenance_urls": [
+        "https://openlibrary.org/books/OL25897294M/A_Library_of_fathers_of_the_Holy_Catholic_Church_Anterior_to_the_Division_of_the_East_and_West"
+      ],
+      "translator_death_year": 1882,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; United States pre-1931 publication basis and Germany/EU translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum and local-law review",
+      "processed_path": "sources_public/processed/augustine_confessions_pusey_clean.md",
+      "raw_checksum_sha256": "20f5b0791e2307186e3db1f80a90f2083ace32a00c5074011dd47d1cb3bb6e00",
+      "normalized_checksum_sha256": "ebcae8c0efd04cfacfa163c973cc154598a5de30078278c990f869788ac2546a",
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus"
+      ],
+      "scope": "Complete translated work after exclusion of wrappers and editorial matter.",
+      "notes": "Candidate raw text already exists locally but is not yet an active v0.3 processed source."
+    },
+    {
+      "source_id": "BOETHIUS_TRACTATES_001",
+      "author": "Boethius",
+      "work": "Theological Tractates",
+      "title": "The Theological Tractates",
+      "translator": "H. F. Stewart and E. K. Rand",
+      "edition_year": 1918,
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/13316"
+      ],
+      "provenance_urls": [
+        "https://openlibrary.org/works/OL1393098W/The_theological_tractates_with_an_English_translation_by_H.F._Stewart_and_E.K._Rand"
+      ],
+      "translator_death_year": 1948,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; United States pre-1931 publication basis and Germany/EU joint-translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum and local-law review",
+      "processed_path": "sources_public/processed/boethius_tractates_stewart_rand_clean.md",
+      "raw_checksum_sha256": "50b50911b5b75398dea6693a6e3df9b0b712ba127ff1ec388eabaf45f92798bc",
+      "normalized_checksum_sha256": "f7e82a1fd6fcb3d381378c2fae6fb6c5fc5e570de16ac352b1d5cffbc339eb4a",
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus"
+      ],
+      "scope": "Complete translated tractates and their named internal divisions, excluding distribution wrappers and unapproved editorial matter.",
+      "notes": "Keep separate from the Consolation so source coverage can distinguish philosophical and theological tractates."
+    },
+    {
+      "source_id": "PROCLUS_ELEMENTS_001",
+      "author": "Proclus",
+      "work": "Elements of Theology",
+      "title": "Elements of Theology",
+      "translator": "Thomas Taylor",
+      "edition_year": 1816,
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/78800/"
+      ],
+      "provenance_urls": [
+        "https://search.worldcat.org/title/28259674"
+      ],
+      "translator_death_year": 1835,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; translator death date supports United States and Germany/EU public-domain basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum and local-law review",
+      "processed_path": "sources_public/processed/proclus_elements_taylor_clean.md",
+      "raw_checksum_sha256": "13204701c535257cc619e16ea4b5e1297a988d38d63d70ff32a48b90a19a4b7c",
+      "normalized_checksum_sha256": "3ece4025e34fdb5a3cea4d9ef219283eb113164b40889d20df84e1a9fd593816",
+      "allowed_content_kinds": [
+        "primary_text",
+        "proposition"
+      ],
+      "excluded_content_kinds": [
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus"
+      ],
+      "scope": "Complete translated propositions, with proposition boundaries preserved.",
+      "notes": "Do not substitute the later E. R. Dodds edition."
+    },
+    {
+      "source_id": "PSEUDO_DIONYSIUS_DIVINE_NAMES_001",
+      "author": "Pseudo-Dionysius",
+      "work": "Divine Names",
+      "title": "The Divine Names",
+      "translator": "C. E. Rolt",
+      "edition_year": 1920,
+      "source_urls": [
+        "https://archive.org/details/dionysiusareopag00pseu",
+        "https://ccel.org/ccel/rolt/dionysius.all.html"
+      ],
+      "provenance_urls": [
+        "https://archive.org/details/dionysiusareopag00pseu"
+      ],
+      "translator_death_year": 1917,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; United States pre-1931 publication basis and Germany/EU translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum, wrapper exclusion, and local-law review",
+      "processed_path": "sources_public/processed/pseudo_dionysius_divine_names_rolt_clean.md",
+      "raw_checksum_sha256": "72aac4b57a90e70f61d243c89b001b44f7ffe118f2567844da1337654890167e",
+      "normalized_checksum_sha256": "b418136ddefedd6568d6a051fefd3f039c22d3237d7bf193263559a2dc28baa7",
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "website_wrapper",
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus"
+      ],
+      "scope": "Complete translated treatise from the 1920 Rolt volume, without modern website wrapper or unapproved editorial material.",
+      "notes": "Use the scan or OCR as provenance authority and treat the CCEL HTML as an access aid, not as a license for its wrapper."
+    },
+    {
+      "source_id": "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001",
+      "author": "Pseudo-Dionysius",
+      "work": "Mystical Theology",
+      "title": "The Mystical Theology",
+      "translator": "C. E. Rolt",
+      "edition_year": 1920,
+      "source_urls": [
+        "https://archive.org/details/dionysiusareopag00pseu",
+        "https://ccel.org/ccel/rolt/dionysius.all.html"
+      ],
+      "provenance_urls": [
+        "https://archive.org/details/dionysiusareopag00pseu"
+      ],
+      "translator_death_year": 1917,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; United States pre-1931 publication basis and Germany/EU translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum, wrapper exclusion, and local-law review",
+      "processed_path": "sources_public/processed/pseudo_dionysius_mystical_theology_rolt_clean.md",
+      "raw_checksum_sha256": "72aac4b57a90e70f61d243c89b001b44f7ffe118f2567844da1337654890167e",
+      "normalized_checksum_sha256": "2f09a5c00fa66fc9ca44af8a9a7e90fd94d0a63e7bb536fbd876a5e621c23e1c",
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "website_wrapper",
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus"
+      ],
+      "scope": "Complete translated treatise from the 1920 Rolt volume, without modern website wrapper or unapproved editorial material.",
+      "notes": "Treat as a separate corpus unit despite sharing a source volume with Divine Names."
+    },
+    {
+      "source_id": "AUGUSTINE_CITY_OF_GOD_001",
+      "author": "Augustine of Hippo",
+      "work": "City of God",
+      "title": "The City of God",
+      "translator": "Marcus Dods",
+      "edition_year": 1871,
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/45304",
+        "https://www.gutenberg.org/ebooks/45305"
+      ],
+      "provenance_urls": [
+        "https://openlibrary.org/books/OL26226748M/The_city_of_God_tr._and_ed._by_Marcus_Dods"
+      ],
+      "translator_death_year": 1909,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "historical English translation; United States pre-1931 publication basis and Germany/EU translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to exact-file checksum and local-law review",
+      "processed_path": "sources_public/processed/augustine_city_of_god_dods_clean.md",
+      "raw_checksum_sha256": "5d1ec69965356b5106f205442596b466b0c34ef2a13fd29673187016d9a99102",
+      "normalized_checksum_sha256": "77d2850c6ded34446529fce2f72465b2a312fee3ceb5ac3a3b4b146f0fecf842",
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "distribution_wrapper",
+        "translator_note",
+        "editorial_apparatus",
+        "reference_index"
+      ],
+      "scope": "Both translated volumes, with book boundaries preserved and editorial apparatus excluded.",
+      "notes": "Large-source stage. Do not allow its size to dominate question or metric summaries."
+    },
+    {
+      "source_id": "PLOTINUS_ENNEADS_I_V_001",
+      "author": "Plotinus",
+      "work": "Enneads I–V, selected original MacKenna volumes I–IV",
+      "title": "The Six Enneads, selected Enneads I–V",
+      "translator": "Stephen MacKenna",
+      "edition_year": 1917,
+      "source_urls": [
+        "https://catalogue.nli.ie/Record/vtls000460398/TOC",
+        "https://openlibrary.org/books/OL6702877M/On_the_nature_of_the_soul",
+        "https://openlibrary.org/works/OL10411349W/The_divine_mind",
+        "https://archive.org/details/plotinustranslat01burkuoft",
+        "https://archive.org/details/plotinustranslat02burkuoft",
+        "https://archive.org/details/plotinustranslat03burkuoft",
+        "https://archive.org/details/plotinustranslat04plotuoft"
+      ],
+      "provenance_urls": [
+        "https://catalogue.nli.ie/Record/vtls000460398/TOC"
+      ],
+      "translator_death_year": 1934,
+      "status": "approved",
+      "verification_state": "edition_and_normalized_checksum_verified",
+      "rights_basis": "original historical English translation volumes; United States pre-1931 publication basis and Germany/EU translator-life-plus-70 basis",
+      "permitted_use": "public repository source candidate subject to scan verification, OCR proofing, exact-file checksum, and local-law review",
+      "processed_path": "sources_public/processed/plotinus_enneads_i_v_mackenna_clean.md",
+      "raw_checksum_sha256": "0042d817fc113227de3f4a26bfea6a1a118b0651e6d33af1b0a36f2008475678",
+      "normalized_checksum_sha256": "cb57354148c34ad0cff96ab9579806f426ba1fbeb5f6eafd352a987fac235656",
+      "allowed_content_kinds": [
+        "primary_text",
+        "verse"
+      ],
+      "excluded_content_kinds": [
+        "scan_wrapper",
+        "translator_note",
+        "editorial_apparatus",
+        "later_revision"
+      ],
+      "scope": "Original MacKenna volumes I–IV covering Enneads I–V only. The later B. S. Page revision and the Sixth Ennead are outside this pack.",
+      "notes": "Highest normalization risk. Keep blocked from ingestion until scan and OCR comparison is complete."
+    },
+    {
+      "source_id": "GREGORY_NYSSA_SOUL_RESURRECTION_001",
+      "author": "Gregory of Nyssa",
+      "work": "On the Soul and the Resurrection",
+      "title": "On the Soul and the Resurrection",
+      "translator": "William Moore and Henry Austin Wilson",
+      "edition_year": 1893,
+      "source_urls": [
+        "https://www.ccel.org/ccel/s/schaff/npnf205/cache/npnf205.pdf",
+        "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers%3A_Series_II/Volume_V/Philosophical_Works/_On_the_Soul_and_the_Resurrection"
+      ],
+      "provenance_urls": [
+        "https://www.ccel.org/ccel/s/schaff/npnf205/cache/npnf205.pdf"
+      ],
+      "translator_death_year": null,
+      "status": "blocked",
+      "verification_state": "co_translator_rights_unresolved",
+      "rights_basis": "United States status may be clear by publication date; Germany/EU status is unresolved until the co-translator identity and death date are verified",
+      "permitted_use": "not permitted in the default public pack while blocked",
+      "processed_path": null,
+      "raw_checksum_sha256": null,
+      "normalized_checksum_sha256": null,
+      "allowed_content_kinds": [
+        "primary_text"
+      ],
+      "excluded_content_kinds": [
+        "website_wrapper",
+        "editorial_apparatus"
+      ],
+      "scope": "Excluded pending rights adjudication.",
+      "notes": "Do not substitute a different translation silently."
+    }
+  ]
+}

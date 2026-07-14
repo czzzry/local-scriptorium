@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Any
 
 SCHEMA_VERSION = "1.0"
+SOURCE_REGISTER_SCHEMA_VERSION = "2.0"
+QUESTION_SCHEMA_VERSION = "2.0"
 PROVENANCE_FIELDS = {
     "source_id",
     "title",
@@ -22,6 +24,243 @@ PROVENANCE_FIELDS = {
 
 class ContractError(ValueError):
     """Raised when a versioned artifact violates its contract."""
+
+
+def validate_source_register(
+    data: dict[str, Any],
+    root: Path | None = None,
+    *,
+    verify_checksums: bool = False,
+) -> None:
+    """Validate the v2 planned/public source register."""
+    if data.get("schema_version") != SOURCE_REGISTER_SCHEMA_VERSION:
+        raise ContractError(
+            f"source register schema_version must be {SOURCE_REGISTER_SCHEMA_VERSION!r}"
+        )
+    sources = data.get("sources")
+    if not isinstance(sources, list) or not sources:
+        raise ContractError("source register sources must be a non-empty list")
+
+    seen: set[str] = set()
+    allowed_statuses = {"approved", "private_only", "blocked"}
+    required = {
+        "source_id",
+        "author",
+        "work",
+        "title",
+        "translator",
+        "edition_year",
+        "source_urls",
+        "status",
+        "verification_state",
+        "permitted_use",
+        "allowed_content_kinds",
+        "excluded_content_kinds",
+        "processed_path",
+        "raw_checksum_sha256",
+        "normalized_checksum_sha256",
+    }
+
+    for index, source in enumerate(sources):
+        if not isinstance(source, dict):
+            raise ContractError(f"source register sources[{index}] must be an object")
+        missing = sorted(required - source.keys())
+        if missing:
+            raise ContractError(
+                f"source register sources[{index}] missing: {', '.join(missing)}"
+            )
+
+        source_id = source["source_id"]
+        if not isinstance(source_id, str) or not source_id.strip():
+            raise ContractError(f"source register sources[{index}] has an invalid source_id")
+        if source_id in seen:
+            raise ContractError(f"source register source IDs must be unique: {source_id}")
+        seen.add(source_id)
+
+        if not isinstance(source["edition_year"], int) or source["edition_year"] < 1:
+            raise ContractError(f"source register edition_year is invalid: {source_id}")
+        if source["status"] not in allowed_statuses:
+            raise ContractError(f"source register status is invalid: {source_id}")
+        if not isinstance(source["source_urls"], list) or not source["source_urls"]:
+            raise ContractError(f"source register source_urls is empty: {source_id}")
+        if not all(isinstance(url, str) and url.strip() for url in source["source_urls"]):
+            raise ContractError(f"source register source_urls are invalid: {source_id}")
+
+        for field in ("allowed_content_kinds", "excluded_content_kinds"):
+            values = source[field]
+            if not isinstance(values, list) or not all(
+                isinstance(value, str) and value.strip() for value in values
+            ):
+                raise ContractError(f"source register {field} is invalid: {source_id}")
+
+        processed_path = source["processed_path"]
+        if processed_path is not None:
+            if not isinstance(processed_path, str) or not processed_path.strip():
+                raise ContractError(f"source register processed_path is invalid: {source_id}")
+            relative_path = Path(processed_path)
+            if relative_path.is_absolute() or ".." in relative_path.parts:
+                raise ContractError(
+                    f"source register processed_path must be portable: {source_id}"
+                )
+            if root is not None and verify_checksums:
+                normalized_checksum = source["normalized_checksum_sha256"]
+                if not isinstance(normalized_checksum, str) or len(normalized_checksum) != 64:
+                    raise ContractError(
+                        f"source register normalized checksum is missing: {source_id}"
+                    )
+                path = root / relative_path
+                if not path.is_file() or sha256_file(path) != normalized_checksum:
+                    raise ContractError(
+                        f"source register normalized checksum mismatch: {source_id}"
+                    )
+
+        for field in ("raw_checksum_sha256", "normalized_checksum_sha256"):
+            value = source[field]
+            if value is not None and (
+                not isinstance(value, str)
+                or len(value) != 64
+                or any(char not in "0123456789abcdef" for char in value)
+            ):
+                raise ContractError(f"source register checksum is malformed: {source_id}")
+
+        if source["status"] == "blocked" and source["processed_path"] is not None:
+            raise ContractError(f"blocked source cannot have a processed path: {source_id}")
+
+
+def validate_pack(data: dict[str, Any], source_register: dict[str, Any]) -> None:
+    """Validate an explicit corpus-pack selection against the source register."""
+    if data.get("schema_version") != SCHEMA_VERSION:
+        raise ContractError(f"pack schema_version must be {SCHEMA_VERSION!r}")
+    if data.get("register_id") != source_register.get("register_id"):
+        raise ContractError("pack register_id does not match the source register")
+
+    sources = {
+        source["source_id"]: source
+        for source in source_register.get("sources", [])
+        if isinstance(source, dict) and isinstance(source.get("source_id"), str)
+    }
+    active = data.get("active_source_ids")
+    blocked = data.get("blocked_source_ids")
+    if not isinstance(active, list) or not active:
+        raise ContractError("pack active_source_ids must be a non-empty list")
+    if len(active) != len(set(active)):
+        raise ContractError("pack active_source_ids must be unique")
+    if not isinstance(blocked, list) or len(blocked) != len(set(blocked)):
+        raise ContractError("pack blocked_source_ids must be a unique list")
+
+    overlap = set(active) & set(blocked)
+    if overlap:
+        raise ContractError(f"pack source cannot be both active and blocked: {sorted(overlap)}")
+    for source_id in active:
+        source = sources.get(source_id)
+        if source is None:
+            raise ContractError(f"pack references unknown active source: {source_id}")
+        if source.get("status") != "approved":
+            raise ContractError(f"pack active source is not approved: {source_id}")
+    for source_id in blocked:
+        source = sources.get(source_id)
+        if source is None:
+            raise ContractError(f"pack references unknown blocked source: {source_id}")
+        if source.get("status") != "blocked":
+            raise ContractError(f"pack blocked source is not blocked in register: {source_id}")
+
+
+def validate_questions_v2(
+    data: dict[str, Any],
+    passage_ids: set[str] | None = None,
+) -> None:
+    """Validate passage-anchored v2 benchmark questions."""
+    if data.get("schema_version") != QUESTION_SCHEMA_VERSION:
+        raise ContractError(f"questions schema_version must be {QUESTION_SCHEMA_VERSION!r}")
+    questions = data.get("questions")
+    if not isinstance(questions, list) or not questions:
+        raise ContractError("v2 questions must be a non-empty list")
+
+    allowed_answerability = {"answerable", "unanswerable", "excluded_pending_adjudication"}
+    allowed_types = {
+        "single_passage_textual",
+        "within_work_synthesis",
+        "attribution_source_scope",
+        "cross_author_comparison",
+        "concept_tracing",
+        "unanswerable",
+    }
+    seen_ids: set[str] = set()
+    splits: set[str] = set()
+    for item in questions:
+        required = {
+            "question_id",
+            "family_id",
+            "question",
+            "split",
+            "question_type",
+            "risk_tags",
+            "answerability",
+            "canonical_passage_ids",
+            "acceptable_evidence_sets",
+            "curation_state",
+        }
+        if not isinstance(item, dict) or not required <= item.keys():
+            raise ContractError("v2 question is missing required fields")
+        question_id = item["question_id"]
+        if not isinstance(question_id, str) or not question_id.strip() or question_id in seen_ids:
+            raise ContractError("v2 question IDs must be unique non-empty strings")
+        family_id = item["family_id"]
+        if not isinstance(family_id, str) or not family_id.strip():
+            raise ContractError(f"v2 question family is invalid: {question_id}")
+        if item["split"] not in {"dev", "test"}:
+            raise ContractError(f"v2 question split is invalid: {question_id}")
+        if item["question_type"] not in allowed_types:
+            raise ContractError(f"v2 question type is invalid: {question_id}")
+        if item["answerability"] not in allowed_answerability:
+            raise ContractError(f"v2 answerability is invalid: {question_id}")
+        if not isinstance(item["question"], str) or not item["question"].strip():
+            raise ContractError(f"v2 question text is empty: {question_id}")
+        if not isinstance(item["risk_tags"], list) or not all(
+            isinstance(tag, str) and tag.strip() for tag in item["risk_tags"]
+        ):
+            raise ContractError(f"v2 risk_tags are invalid: {question_id}")
+        if not isinstance(item["canonical_passage_ids"], list) or not all(
+            isinstance(passage_id, str) and passage_id.strip()
+            for passage_id in item["canonical_passage_ids"]
+        ):
+            raise ContractError(f"v2 canonical passage IDs are invalid: {question_id}")
+        if passage_ids is not None and not set(item["canonical_passage_ids"]) <= passage_ids:
+            raise ContractError(f"v2 question references an unknown passage: {question_id}")
+
+        evidence_sets = item["acceptable_evidence_sets"]
+        if not isinstance(evidence_sets, list):
+            raise ContractError(f"v2 acceptable evidence sets are invalid: {question_id}")
+        if item["answerability"] == "answerable" and not evidence_sets:
+            raise ContractError(f"answerable v2 question needs evidence: {question_id}")
+        if item["answerability"] == "unanswerable" and evidence_sets:
+            raise ContractError(f"unanswerable v2 question cannot have evidence: {question_id}")
+        for evidence_set in evidence_sets:
+            if not isinstance(evidence_set, dict) or not isinstance(
+                evidence_set.get("required_groups"), list
+            ):
+                raise ContractError(f"v2 evidence set is malformed: {question_id}")
+            groups = evidence_set["required_groups"]
+            if not groups or any(
+                not isinstance(group, list)
+                or not group
+                or not all(isinstance(passage_id, str) and passage_id.strip() for passage_id in group)
+                for group in groups
+            ):
+                raise ContractError(f"v2 required evidence groups are malformed: {question_id}")
+            group_ids = {passage_id for group in groups for passage_id in group}
+            if passage_ids is not None and not group_ids <= passage_ids:
+                raise ContractError(f"v2 evidence set references an unknown passage: {question_id}")
+            if not group_ids <= set(item["canonical_passage_ids"]):
+                raise ContractError(f"v2 evidence is not listed on the question: {question_id}")
+
+        if item["curation_state"] not in {"candidate", "reviewed", "accepted", "excluded"}:
+            raise ContractError(f"v2 curation_state is invalid: {question_id}")
+        seen_ids.add(question_id)
+        splits.add(item["split"])
+
+    if splits != {"dev", "test"}:
+        raise ContractError("v2 question dataset must contain dev and test splits")
 
 
 def sha256_file(path: Path) -> str:
@@ -72,7 +311,8 @@ def validate_manifest(data: dict[str, Any], root: Path, *, verify_checksum: bool
 
 
 def validate_corpus(data: dict[str, Any]) -> None:
-    require_version(data, "corpus")
+    if data.get("schema_version") not in {SCHEMA_VERSION, "v0.3-corpus-1.0"}:
+        raise ContractError("corpus schema_version must be '1.0' or 'v0.3-corpus-1.0'")
     chunks = data.get("chunks")
     if not isinstance(chunks, list) or not chunks:
         raise ContractError("corpus.chunks must be a non-empty list")

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "review-classics-policy-v1",
+  "scope": "candidate benchmark and evidence review for Local Scriptorium v0.3",
+  "review_kinds": ["chunk_quality", "question_evidence", "source_scope", "answer_claims"],
+  "independence_levels": {
+    "I1": "fresh blinded review using the same model family",
+    "I2": "fresh blinded review using a different model or provider",
+    "I3": "independent human specialist"
+  },
+  "forbidden_packet_fields": ["expected_answer", "gold_label", "original_relevance", "creator_rationale", "retrieval_rank", "retrieval_score", "split", "prior_review"],
+  "external_adjudication_required_for": ["original_language", "contested_authorship", "translation-sensitive dispute", "chronology", "specialist doctrinal interpretation"],
+  "release_rules": {
+    "all_accepted_questions_reviewed": true,
+    "all_material_disagreements_adjudicated": true,
+    "human_agreement_spot_check_fraction": 0.15,
+    "unresolved_specialist_items_excluded": true
+  },
+  "status": "protocol-defined-review-not-yet-complete"
+}

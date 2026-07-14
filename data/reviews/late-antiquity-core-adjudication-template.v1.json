@@ -1,0 +1,607 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "late-antiquity-core-questions-v2",
+  "status": "pending_human_adjudication",
+  "items": [
+    {
+      "item_id": "CAND-001",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-002",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-003",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-004",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-005",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-006",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-007",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-008",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-009",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-010",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-011",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-012",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-013",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-014",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-015",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-016",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-017",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-018",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-019",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-020",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-021",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-022",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-023",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-024",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-025",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-026",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-027",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-028",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-029",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-030",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-031",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-032",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-033",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-034",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-035",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-036",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-037",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-038",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-039",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-040",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-041",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-042",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-043",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-044",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-045",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-046",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-047",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-048",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-049",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-050",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-051",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-052",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-053",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-054",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-055",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-056",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-057",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-058",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-059",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-060",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-061",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-062",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-063",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-064",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-065",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-066",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-067",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-068",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-069",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-070",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-071",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-072",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-073",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-074",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-075",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-076",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-077",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-078",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-079",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-080",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-081",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-082",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-083",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-084",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-085",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-086",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-087",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-088",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-089",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-090",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-091",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-092",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-093",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-094",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-095",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-096",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-097",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-098",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-099",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    },
+    {
+      "item_id": "CAND-100",
+      "decision": null,
+      "rationale": null,
+      "adjudicator": null
+    }
+  ]
+}

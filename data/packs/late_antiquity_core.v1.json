@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "pack_id": "late-antiquity-core-v1",
+  "register_id": "local-scriptorium-public-source-register-v2",
+  "display_name": "Late Antique Platonism and Its Christian Reception",
+  "description": "A rights-reviewed public-domain candidate pack for deterministic Local Scriptorium v0.3 evaluation.",
+  "active_source_ids": [
+    "BOETHIUS_CONSOLATION_001",
+    "IAMBLICHUS_MYSTERIES_001",
+    "AUGUSTINE_CONFESSIONS_001",
+    "BOETHIUS_TRACTATES_001",
+    "PROCLUS_ELEMENTS_001",
+    "PSEUDO_DIONYSIUS_DIVINE_NAMES_001",
+    "PSEUDO_DIONYSIUS_MYSTICAL_THEOLOGY_001",
+    "AUGUSTINE_CITY_OF_GOD_001",
+    "PLOTINUS_ENNEADS_I_V_001"
+  ],
+  "blocked_source_ids": [
+    "GREGORY_NYSSA_SOUL_RESURRECTION_001"
+  ],
+  "inactive_candidate_source_ids": [
+    "PLATO_APOLOGY_001",
+    "PLATO_APOLOGY_CRITO_PHAEDO_001"
+  ],
+  "allowed_content_kinds": [
+    "primary_text",
+    "verse",
+    "proposition"
+  ],
+  "excluded_content_kinds": [
+    "distribution_wrapper",
+    "gutenberg_wrapper",
+    "website_wrapper",
+    "scan_wrapper",
+    "translator_note",
+    "editorial_apparatus",
+    "reference_index",
+    "later_revision"
+  ],
+  "question_dataset_id": "late-antiquity-questions-v2",
+  "chunker_id": "pending-development-calibration",
+  "review_policy_id": "review-classics-policy-v1",
+  "status": "full-nine-source-ingestion-complete_benchmark-review-pending"
+}

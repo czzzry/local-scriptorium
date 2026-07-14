@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review Classics"
+  short_description: "Blinded source-consistency review"
+  default_prompt: "Use $review-classics to review this blinded Local Scriptorium packet and return a validated structured result."
+policy:
+  allow_implicit_invocation: false
