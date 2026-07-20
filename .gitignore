@@ -42,6 +42,8 @@ dist/
 *.jpg
 *.jpeg
 *.png
+!docs/assets/brand/local-scriptorium-wordmark.jpg
+!docs/assets/social-preview.jpg
 
 # Common archive files
 *.zip

@@ -1,6 +1,17 @@
-# Local Scriptorium
+<p align="center">
+  <img src="docs/assets/brand/local-scriptorium-wordmark.jpg" alt="Local Scriptorium: a local RAG for Late Antique thought" width="100%">
+</p>
+
+<p align="center">
+  <strong>Ask a historical text a question, then inspect the exact passages behind the answer.</strong>
+</p>
 
 [![CI](https://github.com/czzzry/local-scriptorium/actions/workflows/ci.yml/badge.svg)](https://github.com/czzzry/local-scriptorium/actions/workflows/ci.yml)
+
+> **Question:** How do providence and fortune differ?
+>
+> **Result:** a conservative answer plus stable citations to the supporting passages in Boethius and
+> Proclus, ready to inspect rather than simply trust.
 
 Local Scriptorium is a reproducible, local-first RAG evaluation harness for asking questions of historical texts without hiding the evidence. It separates retrieval quality (did we find the right passage?) from answer quality (did the response stay within that passage?). The default workflow is deterministic and offline: no API key, model server, or network connection is required.
 
@@ -45,12 +56,6 @@ The interactive `ask` command prints grounded passages with source identifiers. 
 scriptorium --pack late-antiquity-core-v1 ask \
   "How do providence and fortune differ?" --generate fake
 ```
-
-## Project wordmark
-
-![Local Scriptorium wordmark](docs/assets/brand/local-scriptorium-wordmark.png)
-
-The wordmark uses an illuminated-manuscript initial and scholarly colophon styling to give the project an antique identity without turning the CLI into a decorative art demo.
 
 ## What v0.3 contains
 
@@ -147,7 +152,7 @@ The current regression suite contains 48 tests. Generated runs, local models, em
 - Public-domain translations are not equivalent to original-language critical editions.
 - Retrieval metrics measure this corpus and benchmark, not general RAG performance.
 - The reviewer provides procedural consistency evidence, not scholarly certification.
-- The README wordmark is a raster brand asset; terminal output remains plain and automation-safe.
+- The README wordmark is a compressed raster brand asset; terminal output remains plain and automation-safe.
 
 ## Project status
 
