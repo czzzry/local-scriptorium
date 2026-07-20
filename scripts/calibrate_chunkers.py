@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 from pathlib import Path
 
 from local_scriptorium.ingestion import SourceDescriptor, build_chunks, build_passages

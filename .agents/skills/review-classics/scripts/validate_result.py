@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "src"))
 
-from local_scriptorium.reviewing import ReviewContractError, validate_result
+from local_scriptorium.reviewing import ReviewContractError, validate_result  # noqa: E402
 
 
 def main() -> int:
