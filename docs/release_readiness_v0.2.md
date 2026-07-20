@@ -1,5 +1,7 @@
 # v0.2 Release Readiness Audit
 
+Status: Historical. Superseded by the completed v0.3 release evidence in `README.md`, `CHANGELOG.md`, and `docs/analysis/v0.3_case_study.md`.
+
 This checklist maps the v0.2 brief to repository evidence. It is intended for final human review before tagging.
 
 | Requirement | Evidence | Status |

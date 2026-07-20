@@ -20,7 +20,7 @@ def main() -> None:
     evaluation = json.loads(args.evaluation.read_text(encoding="utf-8"))
     sources = Counter(chunk.get("author", chunk["source_id"]) for chunk in corpus["chunks"])
     types = Counter(question["question_type"] for question in questions)
-    lines = [f"# Local Scriptorium v0.3 development report", "", f"Pack: `{corpus.get('pack_id', 'unknown')}`", f"Passages: {len(corpus.get('passages', []))}", f"Chunks: {len(corpus['chunks'])}", "", "## Chunk distribution by author", "", "| Author | Chunks |", "|---|---:|"]
+    lines = ["# Local Scriptorium v0.3 development report", "", f"Pack: `{corpus.get('pack_id', 'unknown')}`", f"Passages: {len(corpus.get('passages', []))}", f"Chunks: {len(corpus['chunks'])}", "", "## Chunk distribution by author", "", "| Author | Chunks |", "|---|---:|"]
     lines.extend(f"| {author} | {count} |" for author, count in sorted(sources.items()))
     lines += ["", "## Candidate question distribution", "", "| Type | Count |", "|---|---:|"]
     lines.extend(f"| {kind} | {count} |" for kind, count in sorted(types.items()))

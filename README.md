@@ -1,20 +1,38 @@
 # Local Scriptorium
 
+[![CI](https://github.com/czzzry/local-scriptorium/actions/workflows/ci.yml/badge.svg)](https://github.com/czzzry/local-scriptorium/actions/workflows/ci.yml)
+
 Local Scriptorium is a reproducible, local-first RAG evaluation harness for asking questions of historical texts without hiding the evidence. It separates retrieval quality (did we find the right passage?) from answer quality (did the response stay within that passage?). The default workflow is deterministic and offline: no API key, model server, or network connection is required.
 
 The current v0.3 project is an era-specific RAG corpus for Late Antique thought. It ingests nine public-domain source units—Augustine, Boethius, Iamblichus, Proclus, Pseudo-Dionysius, and Plotinus—then preserves provenance from source edition to passage, chunk, citation, evaluation question, and review decision.
 
-## Start here
+## Try it in one minute
 
-### Install
+The repository includes the public corpus and needs no API key, model server, or network connection:
+
+```bash
+make demo
+```
+
+The command retrieves relevant passages for a sample question, prints their stable citations, and produces a deliberately conservative grounded answer. Nothing is downloaded and no model is called.
+
+Example shape:
+
+```text
+Question: How do providence and fortune differ?
+Answer: The retrieved local passages concern Boethius and Proclus...
+Citations: BOETHIUS_CONSOLATION_001:c0060, ...
+Grounded evidence:
+[1] Boethius — BOETHIUS_CONSOLATION_001:c0060
+```
+
+## Install the CLI
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install -e '.[dev]'
 ```
-
-### Ask the corpus
 
 ```bash
 scriptorium --pack late-antiquity-core-v1 ingest
@@ -116,8 +134,9 @@ flowchart LR
 ## Validation
 
 ```bash
-python -m unittest discover -s tests -q
-python scripts/privacy_check.py
+make lint
+make test
+make release-audit
 git diff --check
 ```
 

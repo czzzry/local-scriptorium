@@ -50,7 +50,7 @@ def main() -> None:
     for index in range(10):
         source = sources[index % len(sources)]
         passage = by_source[source][0]
-        item(n, f"scope-{index:03d}", f"Which author and work does this passage belong to, and what edition metadata is recorded?", "dev" if index < 7 else "test", "attribution_source_scope", [passage["passage_id"]], risk=["source_attribution"])
+        item(n, f"scope-{index:03d}", "Which author and work does this passage belong to, and what edition metadata is recorded?", "dev" if index < 7 else "test", "attribution_source_scope", [passage["passage_id"]], risk=["source_attribution"])
         n += 1
     # 20 pairwise cross-author candidates.
     for index in range(20):
