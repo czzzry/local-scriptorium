@@ -25,7 +25,7 @@ The repository includes the public corpus and needs no API key, model server, or
 make demo
 ```
 
-The command retrieves relevant passages for a sample question, prints their stable citations, and produces a deliberately conservative grounded answer. Nothing is downloaded and no model is called.
+The command first builds the local corpus from the committed sources, then retrieves relevant passages for a sample question, prints their stable citations, and produces a deliberately conservative grounded answer. Nothing is downloaded and no model is called.
 
 Example shape:
 
