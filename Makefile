@@ -1,6 +1,7 @@
 .PHONY: demo install test lint release-audit
 
 demo:
+	PYTHONPATH=src python3 -m local_scriptorium --pack late-antiquity-core-v1 ingest
 	PYTHONPATH=src python3 -m local_scriptorium --pack late-antiquity-core-v1 ask \
 		"How do providence and fortune differ?" --generate fake
 
